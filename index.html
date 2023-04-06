@@ -148,16 +148,31 @@
     <h1 data-i18n="profile.title">履歷</h1>
     <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
   </div>
+
   <!--Portfolio頁面-->
   <div class="container" id="Portfolio" style="display:none;">
     <h1 data-i18n="portfolio.title">作品集</h1>
     <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
   </div>
+
   <!--Other頁面-->
   <div class="container" id="Other" style="display:none;">
-    <h1 data-i18n="other.title">其他</h1>
-    <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
+    <!--Github-->
+    <section id="Other_Github" class="raw-container">
+      <img src="github-mark.png" style="height: 32px;width: 32px; margin-right: 20px;" alt="Logo">
+      <h1 class="font-Vertical-alignment">Section 4</h1>
+    </section>
+    <!--Github-->
+    <section>
+      <h1 data-i18n=" other.title">其他</h1>
+      <h2>Section 3</h2>
+      <h3>Section 3</h3>
+      <h4>Section 3</h4>
+      <h5>Section 3</h5>
+      <p>This is the content of section 3.</p>
+    </section>
   </div>
+
   <!--ContactUs頁尾-->
   <footer class="bg-primary text-light footer">
     <div class="container-fluid">
@@ -191,6 +206,18 @@
 
     .nav-item {
       margin-right: 20px;
+    }
+
+    .raw-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .font-Vertical-alignment {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .footer {

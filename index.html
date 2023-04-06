@@ -42,11 +42,11 @@
         jQuery.getJSON('translation.json', function (data) {
           i18next.addResources('en', 'translation', data.en);
           i18next.addResources('zh', 'translation', data.zh);
-        });
 
-        // 切換語言
-        var language = localStorage.getItem("language") || "zh";
-        changeLanguage(language);
+          // 切換語言
+          var language = localStorage.getItem("language") || "zh";
+          changeLanguage(language);
+        });
       });
     }
     window.addEventListener("hashchange", handleHashChange, false);
@@ -112,23 +112,20 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <!--切換語言-->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Language</a>
-            <div class="dropdown-menu">
+        </ul>
+        <!--切換語言-->
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <label id="Language_DropDown" type="label" class="btn btn-secondary" data-i18n="Language_DropDown">中文</label>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu dropdown-menu-end">
               <a class="dropdown-item" type="button" onclick="changeLanguage('zh')">中文</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" type="button" onclick="changeLanguage('en')">English</a>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </nav>

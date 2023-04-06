@@ -1,9 +1,11 @@
 {
   "en": {
+    "Language_DropDown": "English",
     "profile.title": "Resume",
     "profile.intro": "Your personal introduction, experience, skills, etc."
   },
   "zh": {
+    "Language_DropDown": "中文",
     "profile.title": "履歷123",
     "profile.intro": "你的個人介紹、經驗、技能等等123"
   }

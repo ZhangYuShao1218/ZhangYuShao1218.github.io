@@ -16,14 +16,6 @@
 
   <script>
     window.onload = function () {
-      // 按鈕程式碼
-      var btn = document.getElementById("Btn_Profile");
-      btn.onclick = function () {
-        var profile = document.getElementById("Profile");
-        profile.style.display = "block";
-      }
-
-      handleHashChange();
 
       // 初始化 i18next
       i18next.init({
@@ -48,6 +40,9 @@
           changeLanguage(language);
         });
       });
+
+      // 初始化Hash
+      handleHashChange();
     }
     window.addEventListener("hashchange", handleHashChange, false);
 
@@ -57,13 +52,31 @@
       // 判斷 URL 的 hash 值是否為 #Profile，如果是，就顯示 #Profile 頁面，否則隱藏 #Profile 頁面
       var hash = window.location.hash;
       var profile = document.getElementById("Profile");
+      var Portfolio = document.getElementById("Portfolio");
+      var Other = document.getElementById("Other");
       switch (hash) {
         case "#Profile":
           profile.style.display = "block";
+          Portfolio.style.display = "none";
+          Other.style.display = "none";
+          break;
+
+        case "#Portfolio":
+          profile.style.display = "none";
+          Portfolio.style.display = "block";
+          Other.style.display = "none";
+          break;
+
+        case "#Other":
+          profile.style.display = "none";
+          Portfolio.style.display = "none";
+          Other.style.display = "block";
           break;
 
         default:
           profile.style.display = "none";
+          Portfolio.style.display = "none";
+          Other.style.display = "none";
           break;
       }
     }
@@ -101,13 +114,13 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#Profile" id="Btn_Profile">Profile</a>
+            <a class="nav-link" href="#Profile" id="Btn_Profile" onclick="handleHashChange()">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Portfolio">Portfolio</a>
+            <a class="nav-link" href="#Portfolio" id="Btn_Portfolio" onclick="handleHashChange()">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Other">Other</a>
+            <a class="nav-link" href="#Other" id="Btn_Other" onclick="handleHashChange()">Other</a>
           </li>
         </ul>
         <!--切換語言-->
@@ -132,22 +145,27 @@
     <h1 data-i18n="profile.title">履歷</h1>
     <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
   </div>
+  <!--Portfolio頁面-->
+  <div class="container" id="Portfolio" style="display:none;">
+    <h1 data-i18n="profile.title">作品集</h1>
+    <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
+  </div>
+  <!--Other頁面-->
+  <div class="container" id="Other" style="display:none;">
+    <h1 data-i18n="profile.title">其他</h1>
+    <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
+  </div>
   <!--ContactUs頁尾-->
   <footer class="bg-primary text-light footer">
     <div class="container-fluid">
       <p class="footer-title" data-i18n="contact.title">聯絡資訊</p>
       <p class="footer-content">
-        <span style="margin-right: 20px; margin-left: 50px" data-i18n="contact.name">陳奕宇</span>
+        <span style="margin-right: 25px; margin-left: 45px" data-i18n="contact.name">陳奕宇</span>
         <span>Email : </span>
         <span>sar0977@gmail.com</span>
       </p>
     </div>
   </footer>
-  <!--Other頁面-->
-  <div class="container" id="Other" style="display:none;">
-    <h1 data-i18n="profile.title">履歷</h1>
-    <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
-  </div>
 
   <!-- Import Bootstrap Bundle with Popper-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -156,13 +174,13 @@
 
   <style>
     .navbar-nav {
-      margin-bottom: -35px;
+      margin-bottom: -30px;
     }
 
     .navbar-brand {
       margin-right: 30px;
       margin-left: 30px;
-      margin-bottom: -35px;
+      margin-bottom: -30px;
     }
 
     .footer {

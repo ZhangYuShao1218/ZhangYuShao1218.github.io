@@ -6,7 +6,8 @@
     "profile.title": "Resume",
     "profile.intro": "Your personal introduction, experience, skills, etc.",
     "portfolio.title": "Portfolio",
-    "other.title": "Other"
+    "other.title": "Other",
+    "common.go":"Go !"
   },
   "zh": {
     "Language_DropDown": "中文",
@@ -15,6 +16,7 @@
     "profile.title": "履歷123",
     "profile.intro": "你的個人介紹、經驗、技能等等123",
     "portfolio.title": "作品集",
-    "other.title": "其他"
+    "other.title": "其他",
+    "common.go":"前往 !"
   }
 }

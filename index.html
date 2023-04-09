@@ -151,6 +151,41 @@
 
   <!--Portfolio頁面-->
   <div class="container page" id="Portfolio" style="display:none;">
+    <!--作品集BeTen-->
+    <section id="Portfolio_BeTen">
+      <div class="Verticle-container" style="margin-top: 50px;">
+        <div class="Horizontal-container" style="margin-bottom: 50px;">
+          <img src="BeTen_Icon_Gray.png" style="height: 32px;width: 32px; margin-right: 20px;" alt="Logo">
+          <h1 class="font-Vertical-alignment">BeTen</h1>
+          <button type="button" class="btn btn-secondary btn-sm btn2">
+            <a class="nav-link" target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" data-i18n="common.go">前往 !</a>
+          </button>
+        </div>
+        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 100px; margin-bottom: 20px;">
+          一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
+        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 80px; margin-bottom: 20px;">
+          遊戲目標只有一個，讓所有方塊都變成10！
+          方塊只要加起來為10，便能成功消除方塊。
+          隨著速度的增加，和各種奇怪的方塊加入，
+          這場冒險究竟還能走到多遠？
+        </h5>
+        <div class="Horizontal-container" style="margin-left: 80px; margin-bottom: 40px;">
+          <img src="BeTen_Game01.png" style="height: 480px;width: 270px; margin-right: 5px;" alt="BeTen_GamePhoto">
+          <img src="BeTen_Game02.png" style="height: 480px;width: 270px; margin-right: 5px;" alt="BeTen_GamePhoto">
+          <img src="BeTen_Game03.png" style="height: 480px;width: 270px; margin-right: 5px;" alt="BeTen_GamePhoto">
+        </div>
+        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 80px; margin-bottom: 20px;">
+          在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
+          此遊戲是受「Twenty」這款遊戲作為啟發，而成為現在的「BeTen」。
+          從美術、企劃、程式均一手包辦。
+          遊戲擁有完善的基礎架構，從Singleton到各種Manager都十分完善，
+          其中包含多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。
+          <br><br>本遊戲最後有在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。
+        </h5>
+        <div class="border-bottom-custom"></div>
+      </div>
+    </section>
     <h1 data-i18n="portfolio.title">作品集</h1>
     <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
   </div>
@@ -206,8 +241,8 @@
         <div class="Horizontal-container" style="margin-left: 80px; margin-bottom: 10px;">
           <h3 class="font-Vertical-alignment" style="margin-right: 50px;">BeTen (GooglePlay)</h3>
           <button type="button" class="btn btn-primary btn-sm btn1">
-            <a class="nav-link" target="_blank" href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen"
-              data-i18n="common.go">前往 !</a>
+            <a class="nav-link" target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" data-i18n="common.go">前往 !</a>
           </button>
         </div>
       </div>
@@ -253,6 +288,7 @@
 
     .page {
       margin-left: 200px;
+      margin-bottom: 100px;
     }
 
     .border-bottom-custom {
@@ -283,11 +319,23 @@
       margin-bottom: 0;
     }
 
+    .text-content1 {
+      max-width: 70%;
+      line-height: 1.5;
+    }
+
     .btn1 {
       min-width: 80px;
       letter-spacing: 3px;
       position: absolute;
       left: 600px;
+    }
+
+    .btn2 {
+      min-width: 80px;
+      letter-spacing: 3px;
+      position: absolute;
+      left: 550px;
     }
 
     .footer {
@@ -322,6 +370,19 @@
       width: 20px;
       margin-bottom: 5px;
       margin-right: 5px;
+    }
+
+    .Text-b {
+      font-weight: bold;
+    }
+
+    .Text-u {
+      text-decoration: underline;
+    }
+
+    .Text-bu {
+      font-weight: bold;
+      text-decoration: underline;
     }
   </style>
 </body>

@@ -9,9 +9,9 @@
     "portfolio.beten.gamename": "BeTen",
     "portfolio.beten.title": "Chip Elimination! A Fun and Relaxing Adventure.",
     "portfolio.beten.des": "There is only one goal in this game, Turn all the blocks into 10!By combining blocks to add up to 10,You can successfully eliminate them. As the speed increases and various strange blocks are added, How far can you go in this adventure?",
-    "portfolio.beten.intro": "During my free time after work, I developed the game \"BeTen\" with a learning mindset. The game was inspired by \"Twenty\" and developed solely by me, including the art, design, and programming aspects. \"BeTen\" has a solid foundation, with well-designed Singleton and Manager systems, including various features such as multilingual support, difficulty control, beginner tutorials, local saving, music and sound effects, and advertisement monetization. The game has been released on Google Play and promoted through social media and paid advertising.",
+    "portfolio.beten.intro": "During my free time after work, I developed the game \"BeTen\" with a learning mindset. <span class=\"Text-point\">The game was inspired by \"Twenty\"</span> and developed solely by me, including <span class=\"Text-point\">the art, design, and programming aspects.</span> \"BeTen\" has a solid foundation,<span class=\"Text-point\"> with well-designed Singleton and Manager systems,</span> including various features such as <span class=\"Text-point\">multilingual support, difficulty control, beginner tutorials, local saving, music and sound effects, and advertisement monetization.</span> <br><br><strong>The game has been released on Google Play and promoted through social media and paid advertising.</strong>",
     "other.title": "Other",
-    "common.go":"Go !"
+    "common.go": "Go !"
   },
   "zh": {
     "Language_DropDown": "中文",
@@ -23,8 +23,8 @@
     "portfolio.beten.gamename": "BeTen",
     "portfolio.beten.title": "一個大人小孩都能上手，一場接著一場的方塊消除冒險！",
     "portfolio.beten.des": "遊戲目標只有一個，讓所有方塊都變成10！方塊只要加起來為10，便能成功消除方塊。隨著速度的增加，和各種奇怪的方塊加入，這場冒險究竟還能走到多遠？",
-    "portfolio.beten.intro": "在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。 此遊戲是受「Twenty」這款遊戲作為啟發，而成為現在的「BeTen」。 從美術、企劃、程式均一手包辦。 遊戲擁有完善的基礎架構，從Singleton到各種Manager都十分完善， 其中包含多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。<strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>",
+    "portfolio.beten.intro": "在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。此遊戲是<span class=\"Text-point\">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。而我做為唯一開發者，從<span class=\"Text-point\">美術、企劃、程式均一手包辦</span>。「BeTen」擁有完善的基礎架構，<span class=\"Text-point\">從Singleton到各種Manager</span>都十分完善，其中包含<span class=\"Text-point\">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span><br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>",
     "other.title": "其他",
-    "common.go":"前往 !"
+    "common.go": "前往 !"
   }
 }

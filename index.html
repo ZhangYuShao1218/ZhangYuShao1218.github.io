@@ -91,7 +91,7 @@
         var element = elements[i];
         var key = element.getAttribute('data-i18n');
         var text = getTranslation(key, language);
-        element.textContent = text;
+        element.innerHTML = text;
       }
 
       // 存儲用戶所選擇的語言

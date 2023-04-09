@@ -23,7 +23,7 @@
     "portfolio.beten.gamename": "BeTen",
     "portfolio.beten.title": "一個大人小孩都能上手，一場接著一場的方塊消除冒險！",
     "portfolio.beten.des": "遊戲目標只有一個，讓所有方塊都變成10！方塊只要加起來為10，便能成功消除方塊。隨著速度的增加，和各種奇怪的方塊加入，這場冒險究竟還能走到多遠？",
-    "portfolio.beten.intro": "在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。此遊戲是<span class=\"Text-point\">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。而我做為唯一開發者，從<span class=\"Text-point\">美術、企劃、程式均一手包辦</span>。「BeTen」擁有完善的基礎架構，<span class=\"Text-point\">從Singleton到各種Manager</span>都十分完善，其中包含<span class=\"Text-point\">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span><br><br>&lt;strong&gt;本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。&lt;/strong&gt;",
+    "portfolio.beten.intro": "在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。此遊戲是<span class=\"Text-point\">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。而我做為唯一開發者，從<span class=\"Text-point\">美術、企劃、程式均一手包辦</span>。「BeTen」擁有完善的基礎架構，<span class=\"Text-point\">從Singleton到各種Manager</span>都十分完善，其中包含<span class=\"Text-point\">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span><br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>",
     "other.title": "其他",
     "common.go": "前往 !"
   }

@@ -15,6 +15,10 @@
     "portfolio.Maruko.title": "A puzzle game suitable for all ages, enjoy the most exciting match-three levels!",
     "portfolio.Maruko.des": "The childhood classic cartoon \"Chibi Maruko-chan\" is back! Join Chibi Maruko-chan to relive the classic cartoon moments, and collect lots of cute characters and various fashion styles! <br>Are you ready to replenish your daily energy with Chibi Maruko-chan?",
     "portfolio.Maruko.intro": "During my time at <span class=\"Text-point\">Mitfun</span>, I participated in an outsourced development project from<span class=\"Text-point\"> Gamania</span>. The project was <span class=\"Text-point\">developed using the Unity as game engine with BrainCloud as the GameServer.<br><br>This game <span class=\"Text-point\">features match-3 as the core gameplay</span>, with various obstacles and power-ups. It also includes social features such as family and guild, as well as collecting classic cartoon characters and stage scenes.</span><br><br>My responsibilities included the<span class=\"Text-point\"> development of the game's overall core and foundation, iOS iPA, and part of the UI design. I also handled the integration of various third-party plugins and platforms, such as Facebook, AppsFlyer, Firebase, GoogleMobileAds, and Beanfun. Throughout the project, I assisted with some of the C2S API development.</span><br><br><strong>The game is expected to be released on both Google Play and the App Store, with a dedicated international version.</strong>",
+    "portfolio.Adventure.gamename": "櫻桃小丸子-元氣版",
+    "portfolio.Adventure.title": "適合全年齡的益智遊戲，享受最暢快的三消關卡!",
+    "portfolio.Adventure.des": "童年經典卡通櫻桃小丸子回來了!快來跟著小丸子一起回味經典卡通片段，還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!<br>準備好跟著小丸子補充你的日常元氣了嗎?",
+    "portfolio.Adventure.intro": "在<span class=\"Text-point\">Mitfun聚樂方塊</span>時，由<span class=\"Text-point\">遊戲橘子</span>發外包的研發案。<span class=\"Text-point\">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。<br><br>此遊戲以<span class=\"Text-point\">三消為遊戲核心</span>，有著各種不同的障礙物及道具，融合家族、公會等社交玩法，收集多種經典卡通角色和舞台場景。<br><br>本人負責的部分包含:<span class=\"Text-point\">整體遊戲核心及底層、iOS的iPA、部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。過程中也會協助部分C2S的API</span>。<br><br><strong>本遊戲預計在GooglePlay和AppStore上架，並有專門的國際版本。</strong>",
     "other.title": "Other",
     "common.go": "Go !"
   },
@@ -34,6 +38,10 @@
     "portfolio.Maruko.title": "適合全年齡的益智遊戲，享受最暢快的三消關卡!",
     "portfolio.Maruko.des": "童年經典卡通櫻桃小丸子回來了!快來跟著小丸子一起回味經典卡通片段，還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!<br>準備好跟著小丸子補充你的日常元氣了嗎?",
     "portfolio.Maruko.intro": "在<span class=\"Text-point\">Mitfun聚樂方塊</span>時，由<span class=\"Text-point\">遊戲橘子</span>發外包的研發案。<span class=\"Text-point\">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。<br><br>此遊戲以<span class=\"Text-point\">三消為遊戲核心</span>，有著各種不同的障礙物及道具，融合家族、公會等社交玩法，收集多種經典卡通角色和舞台場景。<br><br>本人負責的部分包含:<span class=\"Text-point\">整體遊戲核心及底層、iOS的iPA、部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。過程中也會協助部分C2S的API</span>。<br><br><strong>本遊戲預計在GooglePlay和AppStore上架，並有專門的國際版本。</strong>",
+    "portfolio.Adventure.gamename": "櫻桃小丸子-元氣版",
+    "portfolio.Adventure.title": "適合全年齡的益智遊戲，享受最暢快的三消關卡!",
+    "portfolio.Adventure.des": "童年經典卡通櫻桃小丸子回來了!快來跟著小丸子一起回味經典卡通片段，還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!<br>準備好跟著小丸子補充你的日常元氣了嗎?",
+    "portfolio.Adventure.intro": "在<span class=\"Text-point\">Mitfun聚樂方塊</span>時，由<span class=\"Text-point\">遊戲橘子</span>發外包的研發案。<span class=\"Text-point\">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。<br><br>此遊戲以<span class=\"Text-point\">三消為遊戲核心</span>，有著各種不同的障礙物及道具，融合家族、公會等社交玩法，收集多種經典卡通角色和舞台場景。<br><br>本人負責的部分包含:<span class=\"Text-point\">整體遊戲核心及底層、iOS的iPA、部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。過程中也會協助部分C2S的API</span>。<br><br><strong>本遊戲預計在GooglePlay和AppStore上架，並有專門的國際版本。</strong>",
     "other.title": "其他",
     "common.go": "前往 !"
   }

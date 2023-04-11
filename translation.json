@@ -1,6 +1,7 @@
 {
   "en": {
     "Language_DropDown": "English",
+    "Top_Btn": "Top",
     "contact.title": "Contact Information",
     "contact.name": "CHEN,YI-YU",
     "profile.title": "Resume",
@@ -28,6 +29,7 @@
   },
   "zh": {
     "Language_DropDown": "中文",
+    "Top_Btn": "回頂部",
     "contact.title": "聯絡資訊",
     "contact.name": "陳奕宇",
     "profile.title": "履歷123",

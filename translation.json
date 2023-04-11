@@ -24,6 +24,10 @@
     "portfolio.Althea.title": "2D medieval puzzle game",
     "portfolio.Althea.des": "The Black Death is rampant in Europe! Plague doctors and the Church are working hard to control the outbreak,but the protagonist's father, who is also a plague doctor, has disappeared without a trace.As the epidemic continues to escalate, the powerful and influential people seem to be immune.<br><br>In order to find his father, the protagonist embarks on a journey to uncover the hidden truth behind it all.",
     "portfolio.Althea.intro": "A student team worked together to develop this game, which has a playtime of approximately 15-20 minutes. It tells an alternate story set during the time of the Black Plague in Europe, where the Church seeks to expand its power. The game includes various systems such as <span class=\"Text-point\">dialogue, save/load, and inventory.</span> There are four possible endings, and <span class=\"Text-point\">I was responsible for the overall system and story structure as the planner.</span><br><br><strong>This game was developed with the goal of learning and is available on the itch.io platform.</strong>",
+    "portfolio.Minecraft.gamename": "Mini Minecraft",
+    "portfolio.Minecraft.title": "Minecraft的模仿練習作品",
+    "portfolio.Minecraft.des": "Welcome to the world of Mini Minecraft!Create your own world to your heart's content!There are unique landscapes during both day and night,but be careful of monster attacks!<br><br>This is my world, and I'm here to create!",
+    "portfolio.Minecraft.intro": "Project during the learning process, created using<span class=\"Text-point\"> Unity</span>,and with <span class=\"Text-point\">Minecraft </span>as the imitated target, developed a simplified version ofthe Minecraft game framework. Other game systems include <span class=\"Text-point\">random generation,monster system, day and night system, backpack system,as well as other basic game systems and standard game interfaces.</span><br><br><strong>The game made with a focus on learning, without plans for release.</strong>",
     "other.title": "Other",
     "common.go": "Go !"
   },
@@ -52,6 +56,10 @@
     "portfolio.Althea.title": "2D 中世紀解謎遊戲",
     "portfolio.Althea.des": "歐洲黑死病橫行！瘟疫醫生和教會努力控制疫情，而身為瘟疫醫生的父親一去不復返，疫情逐漸加溫，有權有勢的人身體卻毫無異樣。<br><br>為尋找父親踏上旅途，隱藏在背後的真相究竟是？",
     "portfolio.Althea.intro": "學生團隊一起開發，遊戲時長約為 15~20分鐘，講述歐洲黑死病時期,教會想要擴權的架空故事，包含<span class=\"Text-point\">對話、存讀檔、背包</span>等各種系統。<br>有四種解局，<span class=\"Text-point\">本人負責整體系統和故事架構的企劃</span>。<br><br><strong>學習為目標製作的遊戲，在itch.io 平台上架。</strong>",
+    "portfolio.Minecraft.gamename": "Mini Minecraft",
+    "portfolio.Minecraft.title": "Minecraft的模仿練習作品",
+    "portfolio.Minecraft.des": "這裡是小小Mini Minecraft的世界！盡情創造屬於自己的世界吧！白天和黑夜都有屬於自己的風景，不過還請小心怪物們的襲擊!<br><br>我的世界，我來創造！",
+    "portfolio.Minecraft.intro": "學習過程中的專題，<span class=\"Text-point\">使用Unity製作</span>，並以Minecraft為模仿目標，寫出<span class=\"Text-point\">簡易版本的Minecraft遊戲框架</span>，其他遊戲系統包含<span class=\"Text-point\">隨機生成、怪物系統、日夜系統、背包系統，以及其他基本遊戲系統和標準遊戲介面</span>。<br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>",
     "other.title": "其他",
     "common.go": "前往 !"
   }

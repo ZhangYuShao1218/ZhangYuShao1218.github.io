@@ -131,7 +131,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#Profile" id="Btn_Profile" onclick="handleHashChange()">Profile</a>
+            <a class="nav-link" href="#Profile" id="Btn_Profile" onclick="handleHashChange()">Resume</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Portfolio" id="Btn_Portfolio" onclick="handleHashChange()">Portfolio</a>
@@ -162,14 +162,21 @@
     data-i18n="Top_Btn">Top</button>
   <!--Profile頁面-->
   <div class="container page" id="Profile" style="display:none;">
-    <h1 data-i18n="profile.title">履歷</h1>
-    <p data-i18n="profile.intro">你的個人介紹、經驗、技能等等</p>
+    <!--個人履歷-->
+    <h1 class="Text-pagetitle" style="margin-top: 50px;" data-i18n="profile.title">個人履歷</h1>
+    <p class="Text-b" data-i18n="profile.intro">CHEN,YI-YU Personal Resume.</p>
+    <div class="Verticle-container">
+      <div class="Horizontal-container">
+
+      </div>
+    </div>
+    <div class="border-bottom-custom2"></div>
   </div>
 
   <!--Portfolio頁面-->
   <div class="container page" id="Portfolio" style="display:none;">
     <!--作品集-->
-    <h1 class="Text-pagetitle" data-i18n="portfolio.title">作品集</h1>
+    <h1 class="Text-pagetitle" style="margin-top: 50px;" data-i18n="portfolio.title">作品集</h1>
     <p class="Text-b" data-i18n="portfolio.intro">CHEN,YI-YU Personal Portfolio.</p>
     <div class="border-bottom-custom2"></div>
     <!--作品集Maruko-->

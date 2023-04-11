@@ -19,6 +19,10 @@
     "portfolio.Adventure.title": "Random Dungeon 2D Roguelike Game.",
     "portfolio.Adventure.des": "A mundane cave suddenly cracks with darkness! Countless monsters try to gain their freedom from within. A young adventurer decides to step up, gathering like-minded companions,together they push back the invasion of monsters.<br><br>Facing an endless stream of monsters and an expanding crack of darkness,survival becomes the most luxurious wish.",
     "portfolio.Adventure.intro": "During my studies, I created a game with the goal of learning game development. As a fan of <span class=\"Text-point\">RogueLike games</span>, I attempted to create my own version of such a game. The game core involves <span class=\"Text-point\">randomly generated dungeons</span> with <span class=\"Text-point\">several types of monsters and a final boss</span>. The game includes systems such as <span class=\"Text-point\">sound effects, damage displays, and animations</span> to enhance the player's experience. Additionally, there are <span class=\"Text-point\">dialogue, inventory, equipment, and skill systems</span> to further improve the gameplay experience. <br><br><strong>The game made with a focus on learning, without plans for release.</strong>",
+    "portfolio.Althea.gamename": "Althea",
+    "portfolio.Althea.title": "2D medieval puzzle game",
+    "portfolio.Althea.des": "The Black Death is rampant in Europe! Plague doctors and the Church are working hard to control the outbreak,but the protagonist's father, who is also a plague doctor, has disappeared without a trace.As the epidemic continues to escalate, the powerful and influential people seem to be immune.<br><br>In order to find his father, the protagonist embarks on a journey to uncover the hidden truth behind it all.",
+    "portfolio.Althea.intro": "A student team worked together to develop this game, which has a playtime of approximately 15-20 minutes. It tells an alternate story set during the time of the Black Plague in Europe, where the Church seeks to expand its power. The game includes various systems such as <span class=\"Text-point\">dialogue, save/load, and inventory.</span> There are four possible endings, and <span class=\"Text-point\">I was responsible for the overall system and story structure as the planner.</span><br><br><strong>This game was developed with the goal of learning and is available on the itch.io platform.</strong>",
     "other.title": "Other",
     "common.go": "Go !"
   },
@@ -42,6 +46,10 @@
     "portfolio.Adventure.title": "隨機地城 2D RougeLike 類遊戲",
     "portfolio.Adventure.des": "平凡的山洞突然出現黑暗的裂縫！無數的魔物嘗試從中獲取自由。一位年輕的冒險家決定挺身而出，集結志同道合的夥伴，共同擊退魔物的入侵。<br><br>面對源源不絕的魔物，和逐漸擴張的黑暗裂縫，生存是最奢侈的願望。",
     "portfolio.Adventure.intro": "在學期間，以學習為目標製作的遊戲，因<span class=\"Text-point\">熱愛RougeLike遊戲</span>，故嘗試自己寫了一款。遊戲核心為<span class=\"Text-point\">隨機生成地牢</span>，並有<span class=\"Text-point\">數種小怪和最終頭目</span>。配合<span class=\"Text-point\">音效、傷害顯示、動畫等系統增加打擊感</span>，並有<span class=\"Text-point\">對話、背包、裝備等系統，更有技能系統</span>來增加玩家遊戲體驗。<br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>",
+    "portfolio.Althea.gamename": "Althea",
+    "portfolio.Althea.title": "2D 中世紀解謎遊戲",
+    "portfolio.Althea.des": "歐洲黑死病橫行！瘟疫醫生和教會努力控制疫情，而身為瘟疫醫生的父親一去不復返，疫情逐漸加溫，有權有勢的人身體卻毫無異樣。<br><br>為尋找父親踏上旅途，隱藏在背後的真相究竟是？",
+    "portfolio.Althea.intro": "學生團隊一起開發，遊戲時長約為 15~20分鐘，講述歐洲黑死病時期,教會想要擴權的架空故事，包含<span class=\"Text-point\">對話、存讀檔、背包</span>等各種系統。<br>有四種解局，<span class=\"Text-point\">本人負責整體系統和故事架構的企劃</span>。<br><br><strong>學習為目標製作的遊戲，在itch.io 平台上架。</strong>",
     "other.title": "其他",
     "common.go": "前往 !"
   }

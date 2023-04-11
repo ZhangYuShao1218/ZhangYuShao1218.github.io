@@ -28,6 +28,10 @@
     "portfolio.Minecraft.title": "Minecraft的模仿練習作品",
     "portfolio.Minecraft.des": "Welcome to the world of Mini Minecraft! Create your own world to your heart's content! There are unique landscapes during both day and night,but be careful of monster attacks!<br><br>This is my world, and I'm here to create!",
     "portfolio.Minecraft.intro": "Project during the learning process, created using<span class=\"Text-point\"> Unity</span>,and with <span class=\"Text-point\">Minecraft </span>as the imitated target, developed a simplified version ofthe Minecraft game framework. Other game systems include <span class=\"Text-point\">random generation,monster system, day and night system, backpack system,as well as other basic game systems and standard game interfaces.</span><br><br><strong>The game made with a focus on learning, without plans for release.</strong>",
+    "portfolio.Kindness.gamename": "Kindness",
+    "portfolio.Kindness.title": "2D Single-player Turn-based Card game.",
+    "portfolio.Kindness.des": "Right or wrong, exists in people's hearts, everywhere! Everyone has their own stance, but kindness does not.Regardless of stance, we are here to save every person fighting for kindness.<br><br>Is this still the familiar home to me?",
+    "portfolio.Kindness.intro": "Project during the learning process, created using<span class=\"Text-point\"> Unity</span>. The theme of this card game was based on the hottest topic at the time, the anti-extradition law protests. Players act as first responders trying to save lives during the chaos, with a single turn lasting 30 seconds during which the protesters face constant attacks. There are no sides in this game, only a common goal to save as many lives as possible.</span><br><br><strong>The game made with a focus on learning, without plans for release.</strong>",
     "other.title": "Other",
     "common.go": "Go !"
   },
@@ -60,6 +64,10 @@
     "portfolio.Minecraft.title": "Minecraft的模仿練習作品",
     "portfolio.Minecraft.des": "這裡是小小Mini Minecraft的世界！盡情創造屬於自己的世界吧！白天和黑夜都有屬於自己的風景，不過還請小心怪物們的襲擊!<br><br>我的世界，我來創造！",
     "portfolio.Minecraft.intro": "學習過程中的專題，<span class=\"Text-point\">使用Unity製作</span>，並以Minecraft為模仿目標，寫出<span class=\"Text-point\">簡易版本的Minecraft遊戲框架</span>，其他遊戲系統包含<span class=\"Text-point\">隨機生成、怪物系統、日夜系統、背包系統，以及其他基本遊戲系統和標準遊戲介面</span>。<br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>",
+    "portfolio.Kindness.gamename": "善良",
+    "portfolio.Kindness.title": "2D 單人回合卡牌遊戲",
+    "portfolio.Kindness.des": "是否對錯，存在人們心中，無所不在!每個人都有自己的立場，但善良沒有。無論立場，只為拯救每個為善良奮鬥的人。<br><br>這裡還是我熟悉的家嗎?",
+    "portfolio.Kindness.intro": "學習過程中的專題，<span class=\"Text-point\">使用Unity製作</span>，當時正值反送中話題討論度最高的時候，便以此做主題，練習製作卡牌遊戲。單回合有30秒，示威者會不斷地遭受攻擊。玩家扮演救護員，沒有所謂的立場，只是盡力拯救每個生命。<br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>",
     "other.title": "其他",
     "common.go": "前往 !"
   }

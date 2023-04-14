@@ -54,29 +54,34 @@
     function handleHashChange() {
       // 判斷 URL 的 hash 值是否為 #Profile，如果是，就顯示 #Profile 頁面，否則隱藏 #Profile 頁面
       var hash = window.location.hash;
+      var Home = document.getElementById("Home");
       var profile = document.getElementById("Profile");
       var Portfolio = document.getElementById("Portfolio");
       var Other = document.getElementById("Other");
       switch (hash) {
         case "#Profile":
+          Home.style.display = "none";
           profile.style.display = "block";
           Portfolio.style.display = "none";
           Other.style.display = "none";
           break;
 
         case "#Portfolio":
+          Home.style.display = "none";
           profile.style.display = "none";
           Portfolio.style.display = "block";
           Other.style.display = "none";
           break;
 
         case "#Other":
+          Home.style.display = "none";
           profile.style.display = "none";
           Portfolio.style.display = "none";
           Other.style.display = "block";
           break;
 
         default:
+          Home.style.display = "block";
           profile.style.display = "none";
           Portfolio.style.display = "none";
           Other.style.display = "none";
@@ -160,6 +165,352 @@
   <!--回頂部按鈕-->
   <button onclick="goTopFunction()" id="TopBtn" class="btn btn-secondary" title="Go to top"
     data-i18n="Top_Btn">Top</button>
+
+  <!--Home首頁-->
+  <div class="Verticle-container page" id="Home" style="display:none;">
+    <!--個人履歷-->
+    <h1 class="Text-pagetitle" style="margin-top: 50px;" data-i18n="profile.title">ZhangYuShao</h1>
+    <p class="Text-b" data-i18n="Home.title">陳奕宇個人遊戲工作室</p>
+    <div class="border-bottom-custom2"></div>
+    <div class="Verticle-container" style="margin-top: 60px">
+      <!--個人基本資料-->
+      <section id="Home_Basic" class="section-page">
+        <div class="Horizontal-container" style="margin-bottom: 15px;">
+          <img src="Personal_Photo.jpg" class="border border-2 border-primary rounded-2"
+            style="max-width: 35%; height: auto; margin-right: 80px;" alt="BeTen_GamePhoto">
+          <div class="Verticle-container">
+            <h2 class="Text-b" style="margin-top: 15px; margin-bottom: 5px;">陳奕宇，CHEN YIYU</h2>
+            <h6 class="Text-b text-content2" style="margin-bottom: 5px;" data-i18n="profile.basic.intro1">
+              畢業於成大航太，在學期間主要修習控制課程。</h6>
+            <h6 class="Text-b text-content2" style="margin-bottom: 5px;" data-i18n="profile.basic.intro2">
+              喜愛遊戲，有 GooglePlay & Appstore 上架經驗。</h6>
+            <div class="Horizontal-container" style="margin-top: 10px; margin-bottom: 15px;">
+              <img src="Mail_Icon.png" style="width: 24px; height: 24px; margin-right: 15px;" alt="Phone_Icon">
+              <h5 class="Text-b text-content2 font-Vertical-alignment">sar0977@gmail.com</h5>
+            </div>
+            <div class="Horizontal-container" style="margin-bottom: 15px;">
+              <img src="Phone_Icon.png" style="width: 24px; height: 24px; margin-right: 15px;" alt="Phone_Icon">
+              <h5 class="Text-b text-content2 font-Vertical-alignment" style="margin-right: 40px;">0911073342</h5>
+              <img src="Line_Icon.png" style="width: 24px; height: 24px; margin-right: 15px;" alt="Line_Icon">
+              <h5 class="Text-b text-content2 font-Vertical-alignment">sar0977</h5>
+            </div>
+            <h5 class="Text-b" data-i18n="profile.basic.intro3">國立成功大學，航空太空工程(DAA)</h5>
+            <div class="Horizontal-container" style="margin-bottom: 15px;">
+              <div style="margin-right: 35px;">
+                <a href="https://github.com/ZhangYuShao1218" target="_blank">
+                  <img src="github-mark.png" style="width: 28px; height: 28px;" alt="Button Image">
+                </a>
+              </div>
+              <div style="margin-right: 35px;">
+                <a href="https://play.google.com/store/apps/dev?id=5517905935127521457" target="_blank">
+                  <img src="google-play.png" style="width: 28px; height: 28px;" alt="Button Image">
+                </a>
+              </div>
+              <div style="margin-right: 35px;">
+                <a href="https://www.youtube.com/@yuchen9245" target="_blank">
+                  <img src="Youtube_Icon.png" style="width: 32px; height: 32px;" alt="Button Image">
+                </a>
+              </div>
+              <div style="margin-right: 0px;">
+                <a href="https://zhangyushao1218.github.io/" target="_blank">
+                  <img src="Site_Icon.png" style="width: 38px; height: 38px;" alt="Button Image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="border-bottom-custom4"></div>
+      <!--個人作品集-->
+      <!--作品集Maruko-->
+      <section id="Home_Maruko" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 40px;">
+            <img src="Maruko_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Maruko.gamename">櫻桃小丸子-元氣版</h1>
+            <!--
+          <button type="button" class="btn btn-secondary btn-sm btn2">
+            <a class="nav-link" target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" data-i18n="common.go">前往 !</a>
+          </button>
+          -->
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.title">
+            適合全年齡的益智遊戲，享受最暢快的三消關卡!</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.des">
+            童年經典卡通櫻桃小丸子回來了!
+            快來跟著小丸子一起回味經典卡通片段，
+            還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!
+            <br><br>準備好跟著小丸子補充你的日常元氣了嗎?
+          </h5>
+          <!--Maruko 遊戲照片-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="Maruko_GamePhoto_01.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+            <img src="Maruko_GamePhoto_06.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+            <!--Maruko 輪播-->
+            <div id="Home_Maruko_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 34%; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="5"
+                  aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_03.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_04.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_07.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_08.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_09.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Maruko_GamePhoto_11.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Home_Maruko_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Home_Maruko_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.intro">
+            在<span class="Text-point">Mitfun聚樂方塊</span>時，由<span class="Text-point">遊戲橘子</span>發外包的研發案。
+            <span class="Text-point">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。
+            <br><br>此遊戲以<span class="Text-point">三消為遊戲核心</span>，有著各種不同的障礙物及道具，
+            融合家族、公會等社交玩法，
+            收集多種經典卡通角色和舞台場景。
+            <br><br>本人負責的部分包含:<span class="Text-point">整體遊戲核心及底層、iOS的iPA、
+              部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。
+              過程中也會協助部分C2S的API</span>。
+            <br><br><strong>本遊戲預計在GooglePlay和AppStore上架，並有專門的國際版本。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom4"></div>
+      <!--作品集BeTen-->
+      <section id="Home_BeTen" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 40px;">
+            <img src="BeTen_Icon_Gray.png" style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.beten.gamename">BeTen</h1>
+            <button type="button" class="btn btn-secondary btn-sm btn2">
+              <a class="nav-link" target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" data-i18n="common.go">前往
+                !</a>
+            </button>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.title">
+            一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.des">
+            遊戲目標只有一個，讓所有方塊都變成10！
+            方塊只要加起來為10，便能成功消除方塊。
+            隨著速度的增加，和各種奇怪的方塊加入，
+            這場冒險究竟還能走到多遠？
+          </h5>
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="BeTen_Game01.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+            <img src="BeTen_Game02.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+            <img src="BeTen_Game03.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.intro">
+            在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
+            此遊戲是<span class="Text-point">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。
+            而我做為唯一開發者，從<span class="Text-point">美術、企劃、程式均一手包辦</span>。
+            「BeTen」擁有完善的基礎架構，<span class="Text-point">從Singleton到各種Manager</span>都十分完善，
+            其中包含<span class="Text-point">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span>
+            <br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom4"></div>
+      <!--個人技能-->
+      <section id="Home_Skill" class="section-page">
+        <div class="Verticle-container" style="width: 100%;">
+          <h2 class="Text-bu" style="margin-top: 15px; margin-bottom: 50px;" data-i18n="profile.Skill.topic">技能</h2>
+          <div class="Horizontal-container4" style="margin-left: 40px;">
+            <!--第一行-->
+            <div class="Verticle-container2">
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V1.Title01">程式語言</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>C#</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>C/C++</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>JavaScript</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Python</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Object C</h4>
+                </div>
+              </div>
+              <div class="border-bottom-custom5"></div>
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V1.Title02">語言</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>TOEIC 770</h4>
+                </div>
+              </div>
+            </div>
+            <!--第二行-->
+            <div class="Verticle-container2">
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V2.Title01">工具</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>LabVIEW</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>MATLAB</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>AutoCAD</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>CATIA</h4>
+                </div>
+              </div>
+              <div class="border-bottom-custom5"></div>
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V2.Title02">版本控制</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Git</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>SVN</h4>
+                </div>
+              </div>
+            </div>
+            <!--第三行-->
+            <div class="Verticle-container2">
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V3.Title01">遊戲相關</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Unity</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Pygame</h4>
+                </div>
+              </div>
+              <div class="border-bottom-custom5"></div>
+              <h4 class="Text-bu" style="margin-bottom: 20px;" data-i18n="profile.Skill.V3.Title02">其他</h4>
+              <div class="Verticle-container">
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>GooglePlay</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Appstore</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>HTML</h4>
+                </div>
+                <div class="Horizontal-container" style="margin-left: 10px;">
+                  <h4 style="margin-right: 20px;">▪️</h4>
+                  <h4>Linux/Ubuntu</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="border-bottom-custom4"></div>
+      <!--個人經歷-->
+      <section id="Home_Experience" class="section-page">
+        <div class="Verticle-container" style="width: 100%;">
+          <h2 class="Text-bu" style="margin-top: 15px; margin-bottom: 50px;" data-i18n="profile.Experience.topic">
+            經歷
+          </h2>
+          <!--Mitfun-->
+          <div class="Verticle-container" style="width: 100%; margin-left: 10px; margin-bottom: 30px;">
+            <div class="Horizontal-container3" style="margin-bottom: 0px;">
+              <h4 class="Text-b" style="margin-left: -10px; margin-right: 20px;">●</h4>
+              <h4 class="Text-b" data-i18n="profile.Experience.title00">Mitfun 聚樂方塊股份有限公司</h4>
+            </div>
+            <h5 class="Text-b text-content4" style="margin-bottom: 15px;">2020/10 ~ 2023/03</h5>
+            <h6 class="Text-b text-content3" style="margin-left: 35px;" data-i18n="profile.Experience.des00">
+              <span class="Text-point2">前端工程師</span>，主要使用<span class="Text-point">Unity</span>做為開發工具，
+              以<span class="Text-point">C#為主要語言，並使用Object-C和JavaScript作為輔助</span>。
+              <br>在職期間主要專注在<span class="Text-point">遊戲橘子的專案「櫻桃小丸子」</span>上，負責<span class="Text-point">遊戲核心
+                、串接各種常用的第三方插件(FB、AppsFlyer、Firebase、GoogleMobileAds等)
+                、協助C2S的API，及iOS的iPA維護</span>。<br><br><span class="Text-point2">遊戲將在雙平台上架。</span>
+            </h6>
+          </div>
+          <!--成功大學遊戲設計工作坊-->
+          <div class="Verticle-container" style="width: 100%; margin-left: 10px; margin-bottom: 30px;">
+            <div class="Horizontal-container3" style="margin-bottom: 0px;">
+              <h4 class="Text-b" style="margin-left: -10px; margin-right: 20px;">●</h4>
+              <h4 class="Text-b" data-i18n="profile.Experience.title01">成功大學遊戲設計工作坊</h4>
+            </div>
+            <h5 class="Text-b text-content4" style="margin-bottom: 15px;">2019/09 ~ 2020/06</h5>
+            <h6 class="Text-b text-content3" style="margin-left: 35px;" data-i18n="profile.Experience.des01">
+              <span class="Text-point2">學員</span>，主要內容包含<span
+                class="Text-point">遊戲企劃撰寫、團隊架構解析、遊戲營利分析、系統架構、世界觀、敘事學、當紅遊戲分析、以及一些經驗分享</span>，並以<span
+                class="Text-point">團隊撰寫企畫，最後進行上市及管理。</span>
+            </h6>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  </div>
 
   <!--Profile頁面-->
   <div class="Verticle-container page" id="Profile" style="display:none;">

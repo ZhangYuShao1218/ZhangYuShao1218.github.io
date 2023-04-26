@@ -60,6 +60,7 @@
     "portfolio.Kindness.des": "Right or wrong, always keep in mind! Everyone has their own stance, but kindness does not. Regardless of stance, we are here to save every person fighting for kindness.<br><br>Is this still the familiar home to me?",
     "portfolio.Kindness.intro": "Project made for learning purpos, created using <span class=\"Text-point\">Unity</span> engine. The theme of this card game was based on the hottest topic, the anti-extradition law protests,  at the time. Players act as first responders trying to save lifes during the chaos, with a single turn lasting 30 seconds during which the protesters face constant attacks. There are no sides in this game, only a common goal to save as many lifes as possible.</span><br><br><strong>The game made with a focus on learning, without plans for release.</strong>",
     "other.title": "Other",
+    "other.maruko.title": "CHIBI MARUKO CHAN-Cheerful Spirit",
     "common.go": "Go !"
   },
   "zh": {
@@ -123,6 +124,7 @@
     "portfolio.Kindness.des": "是否對錯，存在人們心中，無所不在!每個人都有自己的立場，但善良沒有。無論立場，只為拯救每個為善良奮鬥的人。<br><br>這裡還是我熟悉的家嗎?",
     "portfolio.Kindness.intro": "學習過程中的專題，<span class=\"Text-point\">使用Unity製作</span>，當時正值反送中話題討論度最高的時候，便以此做主題，練習製作卡牌遊戲。單回合有30秒，示威者會不斷地遭受攻擊。玩家扮演救護員，沒有所謂的立場，只是盡力拯救每個生命。<br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>",
     "other.title": "其他",
+    "other.maruko.title": "櫻桃小丸子-元氣版",
     "common.go": "前往 !"
   }
 }

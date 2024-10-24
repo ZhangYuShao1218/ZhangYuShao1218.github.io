@@ -60,6 +60,13 @@
       var Other = document.getElementById("Other");
       var scroll_Y = document.body.scrollTop;
       switch (hash) {
+        case "#Home":
+          Home.style.display = "block";
+          profile.style.display = "none";
+          Portfolio.style.display = "none";
+          Other.style.display = "none";
+          break;
+
         case "#Profile":
           Home.style.display = "none";
           profile.style.display = "block";
@@ -137,6 +144,9 @@
       <a class="navbar-brand" href="" id="Btn_ZhangYuShao">ZhangYuShao</a>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#Home" id="Btn_Home" onclick="handleHashChange()">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#Profile" id="Btn_Profile" onclick="handleHashChange()">Resume</a>
           </li>
@@ -747,6 +757,25 @@
           <h2 class="Text-bu" style="margin-top: 15px; margin-bottom: 50px;" data-i18n="profile.Experience.topic">
             經歷
           </h2>
+          <!--遊戲橘子 果核數位-->
+          <div class="Verticle-container" style="width: 100%; margin-left: 10px; margin-bottom: 30px;">
+            <div class="Horizontal-container3" style="margin-bottom: 0px;">
+              <h4 class="Text-b" style="margin-left: -10px; margin-right: 20px;">●</h4>
+              <h4 class="Text-b" data-i18n="profile.Experience.title06">果核數位股份有限公司</h4>
+            </div>
+            <h5 class="Text-b text-content4" style="margin-bottom: 15px;">2023/07 ~ 2024/08</h5>
+            <h6 class="Text-b text-content3" style="margin-left: 35px;" data-i18n="profile.Experience.des06">
+              <span class="Text-point2">全端工程師</span>，主要職責包含以下內容：<br>
+              1. 負責測試&擴展 <span class="Text-point">SPKITA GameCloud</span> (SGC)<br>
+              2. 串接&微調相關 <span class="Text-point">AI服務</span> (Azure Open AI & Amazon Bedrock)<br>
+              3. 協助"社交工程" <span class="Text-point">前後端開發</span> (React框架)<br><br>
+              協助 SGC 使用 <span class="Text-point">Unity 開發Demo多人連線遊戲 AnimalStrikers</span><br>
+              並使用AI協助大規模創建社交平台的範本，同時協助前後端進行開發。<br><br>
+              <span class="Text-point2">SGC</span>，主打<span class="Text-point">開發連線遊戲的遊戲雲平台</span>旨在取代遊戲伺服器、自建主機與機房的 SaaS 平台，
+              並提供物品、積分板、公會、郵箱等多項線上即時互動功能。目標在為遊戲開發社群提供便利的開發選項，降低連線遊戲開發門檻與成本，
+              支援市占率最高的遊戲引擎 Unity & Unreal。<br>
+            </h6>
+          </div>
           <!--Mitfun-->
           <div class="Verticle-container" style="width: 100%; margin-left: 10px; margin-bottom: 30px;">
             <div class="Horizontal-container3" style="margin-bottom: 0px;">

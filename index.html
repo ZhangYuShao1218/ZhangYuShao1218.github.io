@@ -46,6 +46,9 @@
 
       // 初始化Hash
       handleHashChange();
+      // 初始化作品集
+      handlePortfolioType();
+
     }
     window.addEventListener("hashchange", handleHashChange, false);
     window.onscroll = function () { scrollFunction() };
@@ -124,6 +127,42 @@
       } else {
         document.getElementById("TopBtn").style.display = "none";
       }
+    }
+
+    // 切換作品集種類
+    function switchPortfolioType(event) {
+      // 儲存選中的類型
+      const clickedButton = event.currentTarget;
+      const type = clickedButton.getAttribute('data-type');
+      
+      localStorage.setItem('selectedType', type);
+
+      handlePortfolioType();
+    }
+
+    // 處理作品集種類
+    function handlePortfolioType() {
+        const savedType = localStorage.getItem('selectedType') || 'Game'; // 預設為 Game
+
+        // 設置按鈕和內容的顯示
+        const buttons = document.querySelectorAll('#PortfolioButtonGroup .btn');
+        const contents = document.querySelectorAll('.PortfolioType');
+
+        buttons.forEach(button => {
+            if (button.getAttribute('data-type') === savedType) {
+                button.classList.add('active'); // 選中按鈕
+            } else {
+                button.classList.remove('active'); // 取消選中
+            }
+        });
+
+        contents.forEach(content => {
+            if (content.getAttribute('data-type') === savedType) {
+                content.classList.add('active'); // 顯示對應內容
+            } else {
+                content.classList.remove('active'); // 隱藏其他內容
+            }
+        });
     }
 
     // 回到頂部
@@ -1011,628 +1050,641 @@
     <h1 class="Text-pagetitle" style="margin-top: 50px;" data-i18n="portfolio.title">作品集</h1>
     <div class="border-bottom-custom2"></div>
     <p class="Text-b" data-i18n="portfolio.intro">CHEN,YI-YU Personal Portfolio.</p>
-    <!--作品集AnimalStrikers-->
-    <section id="Portfolio_AnimalStrikers" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/AnimalStrikers_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.AnimalStrikers.gamename">漿果戰祭</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://www.youtube.com/watch?v=xT3DRQ4cyWc&ab_channel=ZhangYuShao"
-            target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Youtube !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.AnimalStrikers.title">
-          為了漿果！來場熱血沸騰的戰鬥吧！</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.AnimalStrikers.des">
-          選擇你的角色和必殺技，利用各式的武器和道具，擊垮你的對手並想辦法生存到最後！<br>
-          戰吧！一切都是為了漿果。
-        </h5>
-        <!--AnimalStrikers 輪播-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="AnimalStrikers_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 564px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner" data-bs-interval="3000">
-              <div class="carousel-item active">
-                <img src="Resources/Icon/AnimalStrikers_GamePhoto_01.png" alt="AnimalStrikers_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/AnimalStrikers_GamePhoto_02.png" alt="AnimalStrikers_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/AnimalStrikers_GamePhoto_03.png" alt="AnimalStrikers_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/AnimalStrikers_GamePhoto_04.png" alt="AnimalStrikers_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/AnimalStrikers_GamePhoto_05.png" alt="AnimalStrikers_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#AnimalStrikers_Carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#AnimalStrikers_Carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+    <!--切換按鈕-->
+    <div class="btn-group"  id="PortfolioButtonGroup">
+      <button class="btn btn-primary" style="min-width: 120px;" data-type="Game" onclick="switchPortfolioType(event)">Game</button>
+      <button class="btn btn-primary" style="min-width: 120px;" data-type="Web" onclick="switchPortfolioType(event)">Web</button>
+    </div>
+    <!-- 對應內容 -->
+    <!-- Game -->
+    <div data-type="Game" class="PortfolioType">
+      <!--作品集AnimalStrikers-->
+      <section id="Portfolio_AnimalStrikers" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/AnimalStrikers_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.AnimalStrikers.gamename">漿果戰祭</h1>
           </div>
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.AnimalStrikers.intro">
-          使用果核數位自建的<span class="Text-point">遊戲雲平台(SGC)</span>，作為底層連線通訊，開發而成的多人派對遊戲。
-          使用Unity為開發引擎，遊戲核心包含<span class="Text-point">連線、技能、武器、商城、排行榜等遊戲要素。</span>
-          遊戲目標是擊倒對手，想辦法獲得最多的擊殺分數。
-          <br><br>漿果戰祭是自行架設<span class="Text-point">VM做為Server</span>，並參考CSGO的連線架構，採用<span class="Text-point">伺服器權威控制</span>
-          並<span class="Text-point">使用狀態同步&幀同步的混合模式</span>做為連線架構。設有緩衝區(Buffer)收集指令後定時傳送至S端，
-          而後系統會有固定的頻率，同步所有玩家資訊給C端作為修正用，若和本地<span class="Text-point">預測不一樣</span>則會進行修正。
-          <br><br><strong>遊戲支援PC及手機雙平台，尚未有上架打算。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集Maruko-->
-    <section id="Portfolio_Maruko" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/Maruko_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.Maruko.gamename">櫻桃小丸子-元氣版</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://play.google.com/store/apps/details?id=com.gamania.chibimarukocheerfulspirit" target="_blank"
-            class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">GooglePlay !</span>
-          </a>
-          <a href="https://apps.apple.com/tw/app/%E6%AB%BB%E6%A1%83%E5%B0%8F%E4%B8%B8%E5%AD%90-%E5%85%83%E6%B0%A3%E7%89%88/id1671772810"
-            target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">AppStore !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Maruko.title">
-          適合全年齡的益智遊戲，享受最暢快的三消關卡!</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Maruko.des">
-          童年經典卡通櫻桃小丸子回來了!
-          快來跟著小丸子一起回味經典卡通片段，
-          還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!
-          <br><br>準備好跟著小丸子補充你的日常元氣了嗎?
-        </h5>
-        <!--Maruko 遊戲照片-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
-          <img src="Resources/Icon/Maruko_GamePhoto_01.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
-            class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
-          <img src="Resources/Icon/Maruko_GamePhoto_06.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
-            class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
-          <!--Maruko 輪播-->
-          <div id="Maruko_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 34%; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-              <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="5"
-                aria-label="Slide 6"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_03.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_04.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_07.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_08.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_09.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Maruko_GamePhoto_11.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
-                  alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Maruko_Carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Maruko_Carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://www.youtube.com/watch?v=xT3DRQ4cyWc&ab_channel=ZhangYuShao"
+              target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Youtube !</span>
+            </a>
           </div>
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Maruko.intro">
-          在<span class="Text-point">Mitfun聚樂方塊</span>時，由<span class="Text-point">遊戲橘子</span>發外包的研發案。
-          <span class="Text-point">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。
-          <br><br>此遊戲以<span class="Text-point">三消為遊戲核心</span>，有著各種不同的障礙物及道具，
-          融合家族、公會等社交玩法，
-          收集多種經典卡通角色和舞台場景。
-          <br><br>本人負責的部分包含:<span class="Text-point">整體遊戲核心及底層、iOS的iPA、
-            部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。
-            過程中也會協助部分C2S的API</span>。
-          <br><br><strong>本遊戲在GooglePlay和AppStore上架，並有專門的國際版本。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集BeTen-->
-    <section id="Portfolio_BeTen" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/BeTen_Icon_Gray.png" style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.beten.gamename">BeTen</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" target="_blank"
-            class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">GooglePlay !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.beten.title">
-          一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.beten.des">
-          遊戲目標只有一個，讓所有方塊都變成10！
-          方塊只要加起來為10，便能成功消除方塊。
-          隨著速度的增加，和各種奇怪的方塊加入，
-          這場冒險究竟還能走到多遠？
-        </h5>
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
-          <img src="Resources/Icon/BeTen_Game01.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-          <img src="Resources/Icon/BeTen_Game02.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-          <img src="Resources/Icon/BeTen_Game03.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.beten.intro">
-          在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
-          此遊戲是<span class="Text-point">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。
-          而我做為唯一開發者，從<span class="Text-point">美術、企劃、程式均一手包辦</span>。
-          「BeTen」擁有完善的基礎架構，<span class="Text-point">從Singleton到各種Manager</span>都十分完善，
-          其中包含<span class="Text-point">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span>
-          <br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集BrickBreakers-->
-    <section id="Portfolio_BrickBreakers" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/BrickBreakers_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.brickbreakers.gamename">BrickBreakers</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://www.youtube.com/watch?v=i-u45WCr_Yg" target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Youtube !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.brickbreakers.title">
-          最簡單的打磚塊遊戲！</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.brickbreakers.des">
-          一款最傳統的打磚塊遊戲？
-          <br>面對怪物不斷湧現，
-          <br>你! 是否能順利完成挑戰?
-        </h5>
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
-          <img src="Resources/Icon/BrickBreakers01.png" class="border border-2 border-primary rounded-2"
-            style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
-          <img src="Resources/Icon/BrickBreakers02.png" class="border border-2 border-primary rounded-2"
-            style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
-          <img src="Resources/Icon/BrickBreakers03.png" class="border border-2 border-primary rounded-2"
-            style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.brickbreakers.intro">
-          為<span class="Text-point">學習和熟悉UE5引擎，因而開始製作此遊戲</span>。
-          根據Unreal 5的官方教程，一步一腳印製作完成。
-          包含從<span class="Text-point">製作各種Mesh到Texture和Audio資源、到藍圖系統的學習</span>。
-          <br>擁有<span class="Text-point">完善的遊戲循環</span>和<span class="Text-point">完整的美術表現。</span>
-          <br><br><strong>僅為學習為目標製作的遊戲。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集StackOBot-->
-    <section id="Portfolio_StackOBot" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/StackOBot_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.StackOBot.gamename">StackOBot</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://www.youtube.com/watch?v=fyL5ewl1BPA" target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Youtube !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.StackOBot.title">
-          3D 益智解謎遊戲</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.StackOBot.des">
-          你是小小機器人，
-          為了尋找關於自身的真相，踏上旅程。
-          <br>和你的小機器人同伴一起探險吧!
-        </h5>
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="StackOBot_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 540px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#StackOBot_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#StackOBot_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Resources/Icon/StackOBot01.png" class="border border-2 border-primary rounded-2" alt="StackOBot_GamePhoto"
-                  style="max-width: 100%; height: auto;">
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.AnimalStrikers.title">
+            為了漿果！來場熱血沸騰的戰鬥吧！</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.AnimalStrikers.des">
+            選擇你的角色和必殺技，利用各式的武器和道具，擊垮你的對手並想辦法生存到最後！<br>
+            戰吧！一切都是為了漿果。
+          </h5>
+          <!--AnimalStrikers 輪播-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="AnimalStrikers_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 564px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#AnimalStrikers_Carousel" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
               </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/StackOBot02.png" class="border border-2 border-primary rounded-2" alt="StackOBot_GamePhoto"
-                  style="max-width: 100%; height: auto;">
+              <div class="carousel-inner" data-bs-interval="3000">
+                <div class="carousel-item active">
+                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_01.png" alt="AnimalStrikers_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_02.png" alt="AnimalStrikers_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_03.png" alt="AnimalStrikers_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_04.png" alt="AnimalStrikers_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_05.png" alt="AnimalStrikers_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#AnimalStrikers_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#AnimalStrikers_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#StackOBot_Carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#StackOBot_Carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.AnimalStrikers.intro">
+            使用果核數位自建的<span class="Text-point">遊戲雲平台(SGC)</span>，作為底層連線通訊，開發而成的多人派對遊戲。
+            使用Unity為開發引擎，遊戲核心包含<span class="Text-point">連線、技能、武器、商城、排行榜等遊戲要素。</span>
+            遊戲目標是擊倒對手，想辦法獲得最多的擊殺分數。
+            <br><br>漿果戰祭是自行架設<span class="Text-point">VM做為Server</span>，並參考CSGO的連線架構，採用<span class="Text-point">伺服器權威控制</span>
+            並<span class="Text-point">使用狀態同步&幀同步的混合模式</span>做為連線架構。設有緩衝區(Buffer)收集指令後定時傳送至S端，
+            而後系統會有固定的頻率，同步所有玩家資訊給C端作為修正用，若和本地<span class="Text-point">預測不一樣</span>則會進行修正。
+            <br><br><strong>遊戲支援PC及手機雙平台，尚未有上架打算。</strong>
+          </h5>
         </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.StackOBot.intro">
-          為<span class="Text-point">學習和熟悉UE5引擎，因而開始製作此遊戲</span>。
-          使用現成的Mesh和Texture等美術材料，後製過後運用。
-          遊戲包含從<span class="Text-point">人物動畫、遊戲系統、粒子、藍圖等系統的學習使用</span>。
-          <br><span class="Text-point">一個遊戲雛型框架，有完整的遊戲邏輯</span>。
-          <br><br><strong>僅為學習為目標製作的遊戲。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集Adventure-->
-    <section id="Portfolio_Adventure" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 40px;">
-          <img src="Resources/Icon/Adventure_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.Adventure.gamename">Advunture</h1>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Adventure.title">
-          隨機地城 2D RougeLike 類遊戲</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Adventure.des">
-          平凡的山洞突然出現黑暗的裂縫！
-          無數的魔物嘗試從中獲取自由。
-          一位年輕的冒險家決定挺身而出，集結志同道合的夥伴，
-          共同擊退魔物的入侵。
-          <br><br>面對源源不絕的魔物，和逐漸擴張的黑暗裂縫，生存是最奢侈的願望。
-        </h5>
-        <!--Adventure 輪播-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="Adventure_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 564px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner" data-bs-interval="3000">
-              <div class="carousel-item active">
-                <img src="Resources/Icon/Adventure01.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Adventure02.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Adventure03.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Adventure04.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Adventure_Carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Adventure_Carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集Maruko-->
+      <section id="Portfolio_Maruko" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/Maruko_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Maruko.gamename">櫻桃小丸子-元氣版</h1>
           </div>
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Adventure.intro">
-          在學期間，以學習為目標製作的遊戲，因<span class="Text-point">熱愛RougeLike遊戲</span>，故嘗試自己寫了一款。遊戲核心為<span
-            class="Text-point">隨機生成地牢</span>，並有<span class="Text-point">數種小怪和最終頭目</span>。
-          配合<span class="Text-point">音效、傷害顯示、動畫等系統增加打擊感</span>，
-          並有<span class="Text-point">對話、背包、裝備等系統，更有技能系統</span>來增加玩家遊戲體驗。
-          <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集Althea-->
-    <section id="Portfolio_Althea" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/Althea_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.Althea.gamename">Althea</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://altheagamegroup.itch.io/althea" target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Itch.io !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Althea.title">
-          2D 中世紀解謎遊戲</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Althea.des">
-          歐洲黑死病橫行！
-          瘟疫醫生和教會努力控制疫情，
-          而身為瘟疫醫生的父親一去不復返，疫情逐漸加溫，有權有勢的人身體卻毫無異樣。
-          <br><br>為尋找父親踏上旅途，隱藏在背後的真相究竟是？
-        </h5>
-        <!--Althea 輪播-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="Althea_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 564px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Resources/Icon/Althea01.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Althea02.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Althea03.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Althea04.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Althea_Carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Althea_Carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://play.google.com/store/apps/details?id=com.gamania.chibimarukocheerfulspirit" target="_blank"
+              class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">GooglePlay !</span>
+            </a>
+            <a href="https://apps.apple.com/tw/app/%E6%AB%BB%E6%A1%83%E5%B0%8F%E4%B8%B8%E5%AD%90-%E5%85%83%E6%B0%A3%E7%89%88/id1671772810"
+              target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">AppStore !</span>
+            </a>
           </div>
-        </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Althea.intro">
-          學生團隊一起開發，遊戲時長約為 15~20分鐘，
-          講述歐洲黑死病時期，教會想要擴權的架空故事，包含<span class="Text-point">對話、存讀檔、背包</span>等各種系統。
-          <br>有四種解局，<span class="Text-point">本人負責整體系統和故事架構的企劃</span>。
-          <br><br><strong>學習為目標製作的遊戲，在itch.io 平台上架。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集Mini Minecraft-->
-    <section id="Portfolio_Minecraft" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/Minecraft_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.Minecraft.gamename">Mini Minecraft</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://www.youtube.com/watch?v=JKLXb0bgW70" target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Youtube !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Minecraft.title">Minecraft的模仿練習作品</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Minecraft.des">
-          這裡是小小Mini Minecraft的世界！
-          盡情創造屬於自己的世界吧！
-          白天和黑夜都有屬於自己的風景，
-          不過還請小心怪物們的襲擊!
-          <br><br>我的世界，我來創造！
-        </h5>
-        <!--Mini Minecraft 輪播-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="Minecraft_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 800px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.title">
+            適合全年齡的益智遊戲，享受最暢快的三消關卡!</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.des">
+            童年經典卡通櫻桃小丸子回來了!
+            快來跟著小丸子一起回味經典卡通片段，
+            還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!
+            <br><br>準備好跟著小丸子補充你的日常元氣了嗎?
+          </h5>
+          <!--Maruko 遊戲照片-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="Resources/Icon/Maruko_GamePhoto_01.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+            <img src="Resources/Icon/Maruko_GamePhoto_06.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+            <!--Maruko 輪播-->
+            <div id="Maruko_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 34%; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#Maruko_Carousel" data-bs-slide-to="5"
+                  aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_03.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_04.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_07.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_08.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_09.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Maruko_GamePhoto_11.jpg" class="border border-2 border-primary rounded-2 d-block w-100"
+                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Maruko_Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Maruko_Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Resources/Icon/Minecraft01.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Minecraft02.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Minecraft03.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Minecraft_Carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Minecraft_Carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Maruko.intro">
+            在<span class="Text-point">Mitfun聚樂方塊</span>時，由<span class="Text-point">遊戲橘子</span>發外包的研發案。
+            <span class="Text-point">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。
+            <br><br>此遊戲以<span class="Text-point">三消為遊戲核心</span>，有著各種不同的障礙物及道具，
+            融合家族、公會等社交玩法，
+            收集多種經典卡通角色和舞台場景。
+            <br><br>本人負責的部分包含:<span class="Text-point">整體遊戲核心及底層、iOS的iPA、
+              部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。
+              過程中也會協助部分C2S的API</span>。
+            <br><br><strong>本遊戲在GooglePlay和AppStore上架，並有專門的國際版本。</strong>
+          </h5>
         </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Minecraft.intro">
-          學習過程中的專題，<span class="Text-point">使用Unity製作</span>，
-          並以Minecraft為模仿目標，寫出<span class="Text-point">簡易版本的Minecraft遊戲框架</span>，
-          其他遊戲系統包含<span class="Text-point">隨機生成、怪物系統、日夜系統、背包系統，以及其他基本遊戲系統和標準遊戲介面</span>。
-          <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
-        </h5>
-      </div>
-    </section>
-    <div class="border-bottom-custom"></div>
-    <!--作品集Kindness-->
-    <section id="Portfolio_Kindness" class="section-page">
-      <div class="Verticle-container" style="margin-top: 60px;">
-        <div class="Horizontal-container" style="margin-bottom: 10px;">
-          <img src="Resources/Icon/Kindness_Icon.png" class="border border-2 border-primary rounded-2"
-            style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-          <h1 class="font-Vertical-alignment" data-i18n="portfolio.Kindness.gamename">善良</h1>
-        </div>
-        <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-          <a href="https://www.youtube.com/watch?v=u2OVfB-z9gc" target="_blank" class="btn btn-secondary btn-sm btn3">
-            <span class="nav-link">Youtube !</span>
-          </a>
-        </div>
-        <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Kindness.title">2D 單人回合卡牌遊戲</h4>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Kindness.des">
-          是否對錯，存在人們心中，無所不在!
-          每個人都有自己的立場，但善良沒有。
-          無論立場，只為拯救每個為善良奮鬥的人。
-          <br><br>這裡還是我熟悉的家嗎?
-        </h5>
-        <!--Kindness 輪播-->
-        <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-          <div id="Kindness_Carousel" class="carousel slide" data-bs-ride="carousel"
-            style="max-width: 800px; height: auto;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="Resources/Icon/Kindness01.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Kindness02.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="Resources/Icon/Kindness03.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
-                  style="max-width: 100%; height: auto;">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Kindness_Carousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Kindness_Carousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集BeTen-->
+      <section id="Portfolio_BeTen" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/BeTen_Icon_Gray.png" style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.beten.gamename">BeTen</h1>
           </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" target="_blank"
+              class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">GooglePlay !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.title">
+            一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.des">
+            遊戲目標只有一個，讓所有方塊都變成10！
+            方塊只要加起來為10，便能成功消除方塊。
+            隨著速度的增加，和各種奇怪的方塊加入，
+            這場冒險究竟還能走到多遠？
+          </h5>
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="Resources/Icon/BeTen_Game01.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+            <img src="Resources/Icon/BeTen_Game02.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+            <img src="Resources/Icon/BeTen_Game03.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.beten.intro">
+            在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
+            此遊戲是<span class="Text-point">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。
+            而我做為唯一開發者，從<span class="Text-point">美術、企劃、程式均一手包辦</span>。
+            「BeTen」擁有完善的基礎架構，<span class="Text-point">從Singleton到各種Manager</span>都十分完善，
+            其中包含<span class="Text-point">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span>
+            <br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>
+          </h5>
         </div>
-        <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-          data-i18n="portfolio.Kindness.intro">
-          學習過程中的專題，<span class="Text-point">使用Unity製作</span>，
-          當時正值反送中話題討論度最高的時候，便以此做主題，練習製作卡牌遊戲。
-          單回合有30秒，示威者會不斷地遭受攻擊。玩家扮演救護員，
-          沒有所謂的立場，只是盡力拯救每個生命。
-          <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
-        </h5>
-      </div>
-    </section>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集BrickBreakers-->
+      <section id="Portfolio_BrickBreakers" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/BrickBreakers_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.brickbreakers.gamename">BrickBreakers</h1>
+          </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://www.youtube.com/watch?v=i-u45WCr_Yg" target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Youtube !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.brickbreakers.title">
+            最簡單的打磚塊遊戲！</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.brickbreakers.des">
+            一款最傳統的打磚塊遊戲？
+            <br>面對怪物不斷湧現，
+            <br>你! 是否能順利完成挑戰?
+          </h5>
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="Resources/Icon/BrickBreakers01.png" class="border border-2 border-primary rounded-2"
+              style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
+            <img src="Resources/Icon/BrickBreakers02.png" class="border border-2 border-primary rounded-2"
+              style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
+            <img src="Resources/Icon/BrickBreakers03.png" class="border border-2 border-primary rounded-2"
+              style="max-width: 36%; height: auto; margin-right: 10px;" alt="brickbreakers_GamePhoto">
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.brickbreakers.intro">
+            為<span class="Text-point">學習和熟悉UE5引擎，因而開始製作此遊戲</span>。
+            根據Unreal 5的官方教程，一步一腳印製作完成。
+            包含從<span class="Text-point">製作各種Mesh到Texture和Audio資源、到藍圖系統的學習</span>。
+            <br>擁有<span class="Text-point">完善的遊戲循環</span>和<span class="Text-point">完整的美術表現。</span>
+            <br><br><strong>僅為學習為目標製作的遊戲。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集StackOBot-->
+      <section id="Portfolio_StackOBot" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/StackOBot_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.StackOBot.gamename">StackOBot</h1>
+          </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://www.youtube.com/watch?v=fyL5ewl1BPA" target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Youtube !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.StackOBot.title">
+            3D 益智解謎遊戲</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.StackOBot.des">
+            你是小小機器人，
+            為了尋找關於自身的真相，踏上旅程。
+            <br>和你的小機器人同伴一起探險吧!
+          </h5>
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="StackOBot_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 540px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#StackOBot_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#StackOBot_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Resources/Icon/StackOBot01.png" class="border border-2 border-primary rounded-2" alt="StackOBot_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/StackOBot02.png" class="border border-2 border-primary rounded-2" alt="StackOBot_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#StackOBot_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#StackOBot_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.StackOBot.intro">
+            為<span class="Text-point">學習和熟悉UE5引擎，因而開始製作此遊戲</span>。
+            使用現成的Mesh和Texture等美術材料，後製過後運用。
+            遊戲包含從<span class="Text-point">人物動畫、遊戲系統、粒子、藍圖等系統的學習使用</span>。
+            <br><span class="Text-point">一個遊戲雛型框架，有完整的遊戲邏輯</span>。
+            <br><br><strong>僅為學習為目標製作的遊戲。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集Adventure-->
+      <section id="Portfolio_Adventure" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 40px;">
+            <img src="Resources/Icon/Adventure_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Adventure.gamename">Advunture</h1>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Adventure.title">
+            隨機地城 2D RougeLike 類遊戲</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Adventure.des">
+            平凡的山洞突然出現黑暗的裂縫！
+            無數的魔物嘗試從中獲取自由。
+            一位年輕的冒險家決定挺身而出，集結志同道合的夥伴，
+            共同擊退魔物的入侵。
+            <br><br>面對源源不絕的魔物，和逐漸擴張的黑暗裂縫，生存是最奢侈的願望。
+          </h5>
+          <!--Adventure 輪播-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="Adventure_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 564px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#Adventure_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+              </div>
+              <div class="carousel-inner" data-bs-interval="3000">
+                <div class="carousel-item active">
+                  <img src="Resources/Icon/Adventure01.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Adventure02.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Adventure03.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Adventure04.png" class="border border-2 border-primary rounded-2" alt="Adventure_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Adventure_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Adventure_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Adventure.intro">
+            在學期間，以學習為目標製作的遊戲，因<span class="Text-point">熱愛RougeLike遊戲</span>，故嘗試自己寫了一款。遊戲核心為<span
+              class="Text-point">隨機生成地牢</span>，並有<span class="Text-point">數種小怪和最終頭目</span>。
+            配合<span class="Text-point">音效、傷害顯示、動畫等系統增加打擊感</span>，
+            並有<span class="Text-point">對話、背包、裝備等系統，更有技能系統</span>來增加玩家遊戲體驗。
+            <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集Althea-->
+      <section id="Portfolio_Althea" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/Althea_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Althea.gamename">Althea</h1>
+          </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://altheagamegroup.itch.io/althea" target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Itch.io !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Althea.title">
+            2D 中世紀解謎遊戲</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Althea.des">
+            歐洲黑死病橫行！
+            瘟疫醫生和教會努力控制疫情，
+            而身為瘟疫醫生的父親一去不復返，疫情逐漸加溫，有權有勢的人身體卻毫無異樣。
+            <br><br>為尋找父親踏上旅途，隱藏在背後的真相究竟是？
+          </h5>
+          <!--Althea 輪播-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="Althea_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 564px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#Althea_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Resources/Icon/Althea01.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Althea02.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Althea03.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Althea04.png" class="border border-2 border-primary rounded-2" alt="Althea_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Althea_Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Althea_Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Althea.intro">
+            學生團隊一起開發，遊戲時長約為 15~20分鐘，
+            講述歐洲黑死病時期，教會想要擴權的架空故事，包含<span class="Text-point">對話、存讀檔、背包</span>等各種系統。
+            <br>有四種解局，<span class="Text-point">本人負責整體系統和故事架構的企劃</span>。
+            <br><br><strong>學習為目標製作的遊戲，在itch.io 平台上架。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集Mini Minecraft-->
+      <section id="Portfolio_Minecraft" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/Minecraft_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Minecraft.gamename">Mini Minecraft</h1>
+          </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://www.youtube.com/watch?v=JKLXb0bgW70" target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Youtube !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Minecraft.title">Minecraft的模仿練習作品</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Minecraft.des">
+            這裡是小小Mini Minecraft的世界！
+            盡情創造屬於自己的世界吧！
+            白天和黑夜都有屬於自己的風景，
+            不過還請小心怪物們的襲擊!
+            <br><br>我的世界，我來創造！
+          </h5>
+          <!--Mini Minecraft 輪播-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="Minecraft_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 800px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Minecraft_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Resources/Icon/Minecraft01.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Minecraft02.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Minecraft03.png" class="border border-2 border-primary rounded-2" alt="Minecraft_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Minecraft_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Minecraft_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Minecraft.intro">
+            學習過程中的專題，<span class="Text-point">使用Unity製作</span>，
+            並以Minecraft為模仿目標，寫出<span class="Text-point">簡易版本的Minecraft遊戲框架</span>，
+            其他遊戲系統包含<span class="Text-point">隨機生成、怪物系統、日夜系統、背包系統，以及其他基本遊戲系統和標準遊戲介面</span>。
+            <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
+      <!--作品集Kindness-->
+      <section id="Portfolio_Kindness" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/Kindness_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Kindness.gamename">善良</h1>
+          </div>
+          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+            <a href="https://www.youtube.com/watch?v=u2OVfB-z9gc" target="_blank" class="btn btn-secondary btn-sm btn3">
+              <span class="nav-link">Youtube !</span>
+            </a>
+          </div>
+          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Kindness.title">2D 單人回合卡牌遊戲</h4>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Kindness.des">
+            是否對錯，存在人們心中，無所不在!
+            每個人都有自己的立場，但善良沒有。
+            無論立場，只為拯救每個為善良奮鬥的人。
+            <br><br>這裡還是我熟悉的家嗎?
+          </h5>
+          <!--Kindness 輪播-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+            <div id="Kindness_Carousel" class="carousel slide" data-bs-ride="carousel"
+              style="max-width: 800px; height: auto;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#Kindness_Carousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="Resources/Icon/Kindness01.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Kindness02.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/Kindness03.png" class="border border-2 border-primary rounded-2" alt="Kindness_GamePhoto"
+                    style="max-width: 100%; height: auto;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Kindness_Carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Kindness_Carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.Kindness.intro">
+            學習過程中的專題，<span class="Text-point">使用Unity製作</span>，
+            當時正值反送中話題討論度最高的時候，便以此做主題，練習製作卡牌遊戲。
+            單回合有30秒，示威者會不斷地遭受攻擊。玩家扮演救護員，
+            沒有所謂的立場，只是盡力拯救每個生命。
+            <br><br><strong>學習為目標製作的遊戲，無上架計畫。</strong>
+          </h5>
+        </div>
+      </section>
+    </div>
+    <!-- Web -->
+    <div data-type="Web" class="PortfolioType">
+      <p>B 內容：這是 Web 的內容。</p>
+    </div>
   </div>
 
   <!--Other頁面-->
@@ -2023,6 +2075,17 @@
       cursor: pointer;
       padding: 15px;
       border-radius: 4px;
+    }
+
+    #PortfolioButtonGroup .btn.active {
+        background-color: #66A593; /* 選中時的背景色 */
+        color: #fff; /* 選中時的文字色 */
+    }
+    .PortfolioType {
+        display: none; /* 預設隱藏 */
+    }
+    .PortfolioType.active {
+        display: block; /* 顯示選中的內容 */
     }
 
     .Text-pagetitle {

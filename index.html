@@ -273,235 +273,391 @@
       </section>
       <div class="border-bottom-custom4"></div>
       <!--個人作品集-->
-      <!--作品集AnimalStrikers-->
-      <section id="Home_AnimalStrikers" class="section-page">
-        <div class="Verticle-container" style="margin-top: 40px;">
-          <div class="Horizontal-container" style="margin-bottom: 10px;">
-            <img src="Resources/Icon/AnimalStrikers_Icon.png" class="border border-2 border-primary rounded-2"
-              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-            <h1 class="font-Vertical-alignment" data-i18n="portfolio.AnimalStrikers.gamename">漿果戰祭</h1>
-          </div>
-          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-            <a href="https://www.youtube.com/watch?v=xT3DRQ4cyWc&ab_channel=ZhangYuShao"
-              target="_blank" class="btn btn-secondary btn-sm btn3">
-              <span class="nav-link">Youtube !</span>
-            </a>
-          </div>
-          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.AnimalStrikers.title">
-            為了漿果！來場熱血沸騰的戰鬥吧！</h4>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.AnimalStrikers.des">
-            選擇你的角色和必殺技，利用各式的武器和道具，擊垮你的對手並想辦法生存到最後！<br>
-            戰吧！一切都是為了漿果。
-          </h5>
-          <!--AnimalStrikers 輪播-->
-          <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
-            <div id="Home_AnimalStrikers_Carousel" class="carousel slide" data-bs-ride="carousel"
-              style="max-width: 564px; height: auto;">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="3"
-                  aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="4"
-                  aria-label="Slide 5"></button>
-              </div>
-              <div class="carousel-inner" data-bs-interval="3000">
-                <div class="carousel-item active">
-                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_01.png" alt="AnimalStrikers_GamePhoto"
-                    style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_02.png" alt="AnimalStrikers_GamePhoto"
-                    style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_03.png" alt="AnimalStrikers_GamePhoto"
-                    style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_04.png" alt="AnimalStrikers_GamePhoto"
-                    style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/AnimalStrikers_GamePhoto_05.png" alt="AnimalStrikers_GamePhoto"
-                    style="max-width: 100%; height: auto;">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Home_AnimalStrikers_Carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#Home_AnimalStrikers_Carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+      <section id="Home_Skill" class="section-page">
+        <div class="Verticle-container" style="width: 100%;">
+          <div class="Horizontal-container">
+            <!--標頭-->
+            <h2 class="Text-bu" style="margin-top: 10px; margin-right: 50px;" data-i18n="portfolio.title">作品集</h2>
+            <!--切換按鈕-->
+            <div class="btn-group"  id="PortfolioButtonGroup">
+              <button class="btn btn-primary" style="min-width: 120px;" data-type="Game" onclick="switchPortfolioType(event)">Game</button>
+              <button class="btn btn-primary" style="min-width: 120px;" data-type="Web" onclick="switchPortfolioType(event)">Software & Web</button>
             </div>
           </div>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.AnimalStrikers.intro">
-            使用果核數位自建的<span class="Text-point">遊戲雲平台(SGC)</span>，作為底層連線通訊，開發而成的多人派對遊戲。
-            使用Unity為開發引擎，遊戲核心包含<span class="Text-point">連線、技能、武器、商城、排行榜等遊戲要素。</span>
-            遊戲目標是擊倒對手，想辦法獲得最多的擊殺分數。
-            <br><br>漿果戰祭是自行架設<span class="Text-point">VM做為Server</span>，並參考CSGO的連線架構，採用<span class="Text-point">伺服器權威控制</span>
-            並<span class="Text-point">使用狀態同步&幀同步的混合模式</span>做為連線架構。設有緩衝區(Buffer)收集指令後定時傳送至S端，
-            而後系統會有固定的頻率，同步所有玩家資訊給C端作為修正用，若和本地<span class="Text-point">預測不一樣</span>則會進行修正。
-            <br><br><strong>遊戲支援PC及手機雙平台，尚未有上架打算。</strong>
-          </h5>
-        </div>
-      </section>
-      <div class="border-bottom-custom4"></div>
-      <!--作品集Maruko-->
-      <section id="Home_Maruko" class="section-page">
-        <div class="Verticle-container" style="margin-top: 40px;">
-          <div class="Horizontal-container" style="margin-bottom: 10px;">
-            <img src="Resources/Icon/Maruko_Icon.png" class="border border-2 border-primary rounded-2"
-              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-            <h1 class="font-Vertical-alignment" data-i18n="portfolio.Maruko.gamename">櫻桃小丸子-元氣版</h1>
-          </div>
-          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-            <a href="https://play.google.com/store/apps/details?id=com.gamania.chibimarukocheerfulspirit"
-              target="_blank" class="btn btn-secondary btn-sm btn3">
-              <span class="nav-link">GooglePlay !</span>
-            </a>
-            <a href="https://apps.apple.com/tw/app/%E6%AB%BB%E6%A1%83%E5%B0%8F%E4%B8%B8%E5%AD%90-%E5%85%83%E6%B0%A3%E7%89%88/id1671772810"
-              target="_blank" class="btn btn-secondary btn-sm btn3">
-              <span class="nav-link">AppStore !</span>
-            </a>
-          </div>
-          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.Maruko.title">
-            適合全年齡的益智遊戲，享受最暢快的三消關卡!</h4>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.Maruko.des">
-            童年經典卡通櫻桃小丸子回來了!
-            快來跟著小丸子一起回味經典卡通片段，
-            還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!
-            <br><br>準備好跟著小丸子補充你的日常元氣了嗎?
-          </h5>
-          <!--Maruko 遊戲照片-->
-          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
-            <img src="Resources/Icon/Maruko_GamePhoto_01.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
-              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
-            <img src="Resources/Icon/Maruko_GamePhoto_06.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
-              class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
-            <!--Maruko 輪播-->
-            <div id="Home_Maruko_Carousel" class="carousel slide" data-bs-ride="carousel"
-              style="max-width: 34%; height: auto;">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="3"
-                  aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="4"
-                  aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="5"
-                  aria-label="Slide 6"></button>
+          <!-- 對應內容 -->
+          <!-- Game -->
+          <div data-type="Game" class="PortfolioType">
+            <!--作品集AnimalStrikers-->
+            <section id="Home_AnimalStrikers" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/AnimalStrikers_Icon.png" class="border border-2 border-primary rounded-2"
+                    style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.AnimalStrikers.gamename">漿果戰祭</h1>
+                </div>
+                <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+                  <a href="https://www.youtube.com/watch?v=xT3DRQ4cyWc&ab_channel=ZhangYuShao"
+                    target="_blank" class="btn btn-secondary btn-sm btn3">
+                    <span class="nav-link">Youtube !</span>
+                  </a>
+                </div>
+                <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AnimalStrikers.title">
+                  為了漿果！來場熱血沸騰的戰鬥吧！</h4>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AnimalStrikers.des">
+                  選擇你的角色和必殺技，利用各式的武器和道具，擊垮你的對手並想辦法生存到最後！<br>
+                  戰吧！一切都是為了漿果。
+                </h5>
+                <!--AnimalStrikers 輪播-->
+                <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+                  <div id="Home_AnimalStrikers_Carousel" class="carousel slide" data-bs-ride="carousel"
+                    style="max-width: 564px; height: auto;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#Home_AnimalStrikers_Carousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner" data-bs-interval="3000">
+                      <div class="carousel-item active">
+                        <img src="Resources/Icon/AnimalStrikers_GamePhoto_01.png" alt="AnimalStrikers_GamePhoto"
+                          style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AnimalStrikers_GamePhoto_02.png" alt="AnimalStrikers_GamePhoto"
+                          style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AnimalStrikers_GamePhoto_03.png" alt="AnimalStrikers_GamePhoto"
+                          style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AnimalStrikers_GamePhoto_04.png" alt="AnimalStrikers_GamePhoto"
+                          style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AnimalStrikers_GamePhoto_05.png" alt="AnimalStrikers_GamePhoto"
+                          style="max-width: 100%; height: auto;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#Home_AnimalStrikers_Carousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#Home_AnimalStrikers_Carousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AnimalStrikers.intro">
+                  使用果核數位自建的<span class="Text-point">遊戲雲平台(SGC)</span>，作為底層連線通訊，開發而成的多人派對遊戲。
+                  使用Unity為開發引擎，遊戲核心包含<span class="Text-point">連線、技能、武器、商城、排行榜等遊戲要素。</span>
+                  遊戲目標是擊倒對手，想辦法獲得最多的擊殺分數。
+                  <br><br>漿果戰祭是自行架設<span class="Text-point">VM做為Server</span>，並參考CSGO的連線架構，採用<span class="Text-point">伺服器權威控制</span>
+                  並<span class="Text-point">使用狀態同步&幀同步的混合模式</span>做為連線架構。設有緩衝區(Buffer)收集指令後定時傳送至S端，
+                  而後系統會有固定的頻率，同步所有玩家資訊給C端作為修正用，若和本地<span class="Text-point">預測不一樣</span>則會進行修正。
+                  <br><br><strong>遊戲支援PC及手機雙平台，尚未有上架打算。</strong>
+                </h5>
               </div>
-              <div class="carousel-inner border border-2 border-primary rounded-2">
-                <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_03.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+            </section>
+            <div class="border-bottom-custom4"></div>
+            <!--作品集Maruko-->
+            <section id="Home_Maruko" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/Maruko_Icon.png" class="border border-2 border-primary rounded-2"
+                    style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.Maruko.gamename">櫻桃小丸子-元氣版</h1>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_04.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+                  <a href="https://play.google.com/store/apps/details?id=com.gamania.chibimarukocheerfulspirit"
+                    target="_blank" class="btn btn-secondary btn-sm btn3">
+                    <span class="nav-link">GooglePlay !</span>
+                  </a>
+                  <a href="https://apps.apple.com/tw/app/%E6%AB%BB%E6%A1%83%E5%B0%8F%E4%B8%B8%E5%AD%90-%E5%85%83%E6%B0%A3%E7%89%88/id1671772810"
+                    target="_blank" class="btn btn-secondary btn-sm btn3">
+                    <span class="nav-link">AppStore !</span>
+                  </a>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_07.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.Maruko.title">
+                  適合全年齡的益智遊戲，享受最暢快的三消關卡!</h4>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.Maruko.des">
+                  童年經典卡通櫻桃小丸子回來了!
+                  快來跟著小丸子一起回味經典卡通片段，
+                  還有超多可愛角色及琳琅滿目的服裝造型等著你來蒐集!
+                  <br><br>準備好跟著小丸子補充你的日常元氣了嗎?
+                </h5>
+                <!--Maruko 遊戲照片-->
+                <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+                  <img src="Resources/Icon/Maruko_GamePhoto_01.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+                    class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+                  <img src="Resources/Icon/Maruko_GamePhoto_06.jpg" style="max-width: 32%; height: auto; margin-right: 15px;"
+                    class="border border-2 border-primary rounded-2" alt="Maruko_GamePhoto">
+                  <!--Maruko 輪播-->
+                  <div id="Home_Maruko_Carousel" class="carousel slide" data-bs-ride="carousel"
+                    style="max-width: 34%; height: auto;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#Home_Maruko_Carousel" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner border border-2 border-primary rounded-2">
+                      <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_03.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_04.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_07.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_08.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_09.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/Maruko_GamePhoto_11.jpg" class="d-block w-100"
+                          alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#Home_Maruko_Carousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#Home_Maruko_Carousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_08.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_09.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                  <img src="Resources/Icon/Maruko_GamePhoto_11.jpg" class="d-block w-100"
-                    alt="Maruko_GamePhoto" style="max-width: 100%; height: auto;">
-                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.Maruko.intro">
+                  在<span class="Text-point">Mitfun聚樂方塊</span>時，由<span class="Text-point">遊戲橘子</span>發外包的研發案。
+                  <span class="Text-point">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。
+                  <br><br>此遊戲以<span class="Text-point">三消為遊戲核心</span>，有著各種不同的障礙物及道具，
+                  融合家族、公會等社交玩法，
+                  收集多種經典卡通角色和舞台場景。
+                  <br><br>本人負責的部分包含:<span class="Text-point">整體遊戲核心及底層、iOS的iPA、
+                    部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。
+                    過程中也會協助部分C2S的API</span>。
+                  <br><br><strong>本遊戲在GooglePlay和AppStore上架，並有專門的國際版本。</strong>
+                </h5>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Home_Maruko_Carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#Home_Maruko_Carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+            </section>
+            <div class="border-bottom-custom4"></div>
+            <!--作品集BeTen-->
+            <section id="Home_BeTen" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/BeTen_Icon_Gray.png" style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.beten.gamename">BeTen</h1>
+                </div>
+                <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
+                  <a href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" target="_blank"
+                    class="btn btn-secondary btn-sm btn3">
+                    <span class="nav-link">GooglePlay !</span>
+                  </a>
+                </div>
+                <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.beten.title">
+                  一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.beten.des">
+                  遊戲目標只有一個，讓所有方塊都變成10！
+                  方塊只要加起來為10，便能成功消除方塊。
+                  隨著速度的增加，和各種奇怪的方塊加入，
+                  這場冒險究竟還能走到多遠？
+                </h5>
+                <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+                  <img src="Resources/Icon/BeTen_Game01.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+                  <img src="Resources/Icon/BeTen_Game02.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+                  <img src="Resources/Icon/BeTen_Game03.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
+                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.beten.intro">
+                  在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
+                  此遊戲是<span class="Text-point">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。
+                  而我做為唯一開發者，從<span class="Text-point">美術、企劃、程式均一手包辦</span>。
+                  「BeTen」擁有完善的基礎架構，<span class="Text-point">從Singleton到各種Manager</span>都十分完善，
+                  其中包含<span class="Text-point">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span>
+                  <br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>
+                </h5>
+              </div>
+            </section>
+            <div class="border-bottom-custom4"></div>
           </div>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.Maruko.intro">
-            在<span class="Text-point">Mitfun聚樂方塊</span>時，由<span class="Text-point">遊戲橘子</span>發外包的研發案。
-            <span class="Text-point">運用Unity遊戲引擎開發，BrainCloud作為GameServer</span>。
-            <br><br>此遊戲以<span class="Text-point">三消為遊戲核心</span>，有著各種不同的障礙物及道具，
-            融合家族、公會等社交玩法，
-            收集多種經典卡通角色和舞台場景。
-            <br><br>本人負責的部分包含:<span class="Text-point">整體遊戲核心及底層、iOS的iPA、
-              部分的UI製作各種第三方插件和平台的串接(FB、AppsFlyer、Firebase、GoogleMobileAds、Beanfun等)。
-              過程中也會協助部分C2S的API</span>。
-            <br><br><strong>本遊戲在GooglePlay和AppStore上架，並有專門的國際版本。</strong>
-          </h5>
+          <!-- Web -->
+          <div data-type="Web" class="PortfolioType">
+            <!--AI翻譯-->
+            <section id="Portfolio_AiTranslate" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/SoftwareWeb_Icon.png" class="border border-2 border-primary rounded-2"
+                    style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.AITranslate.title">AI翻譯 (前端 & 後端)</h1>
+                </div>
+                <!--AI翻譯 圖片-->
+                <div class="Horizontal-container border border-3 rounded-2" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+                  <img src="Resources/Icon/AWSBedrock_Front_1.png" style="max-width: 100%; height: auto;" alt="AiTranslate_GamePhoto">
+                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AITranslate.des">
+                  支援<span class="Text-point">六種語言</span>(德文、法文、中文、西班牙文、日文、英文)。
+                  此專案會接收使用者傳入的翻譯文件(Json格式)，傳遞至後端，由後端聯繫<span class="Text-point">AWS的Bedrock服務</span>，
+                  並透過調教好的訓練詞，準確轉為指定語言及格式，並回傳至前端供下載。<br><br>
+                  單人負責的專案，前端使用<span class="Text-point">React框架</span>。後端架設在<span class="Text-point">VM</span>上
+                  ，且負責和AWS Bedrock進行溝通。(初期使用Microsoft Azue Open AI，後因成本和效果考量，轉換至AWS Bedrock)
+                </h5>
+              </div>
+            </section>
+            <div class="border-bottom-custom"></div>
+            <!--AI繪圖-->
+            <section id="Portfolio_AiDrawing" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/SoftwareWeb_Icon.png" class="border border-2 border-primary rounded-2"
+                    style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.AIDrawing.title">AI繪圖 (前端)</h1>
+                </div>
+                <!--AI繪圖 輪播-->
+                <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+                  <div id="AIDrawing_Carousel" class="carousel slide" data-bs-ride="carousel"
+                    style="max-width: 564px; height: auto;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#AIDrawing_Carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#AIDrawing_Carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner border border-3 rounded-2" data-bs-interval="3000">
+                      <div class="carousel-item active">
+                        <img src="Resources/Icon/AIDrawing_1.png" alt="AIDrawing_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AIDrawing_2.png" alt="AIDrawing_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#AIDrawing_Carousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#AIDrawing_Carousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AIDrawing.des">
+                  此專案會根據使用者傳入的照片 & 提示詞，將<span class="Text-point">Stable Diffusion</span>進行微調，
+                  轉成相對應的<span class="Text-point">微調模型</span>，使其能夠<span class="Text-point">產生指定風格</span>，
+                  甚至是<span class="Text-point">模仿指定創作者的風格</span>，進行圖片生成。<br><br>
+                  本人負責的部分是網頁前端的顯示，使用<span class="Text-point">React</span>，作為前端的開發框架，運用<span class="Text-point">Zustand</span>進行狀態管理，
+                  css則是使用<span class="Text-point">Tailwind</span>。
+                <h5>
+              </div>
+            </section>
+            <div class="border-bottom-custom"></div>
+            <!--AI信件-->
+            <section id="Portfolio_AiMail" class="section-page">
+              <div class="Verticle-container" style="margin-top: 40px;">
+                <div class="Horizontal-container" style="margin-bottom: 10px;">
+                  <img src="Resources/Icon/SoftwareWeb_Icon.png" class="border border-2 border-primary rounded-2"
+                    style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+                  <h1 class="font-Vertical-alignment" data-i18n="portfolio.AIMail.title">AI信件產生器 (前端 & 後端)</h1>
+                </div>
+                <!--AI信件 輪播-->
+                <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
+                  <div id="AIMail_Carousel" class="carousel slide" data-bs-ride="carousel"
+                    style="max-width: 564px; height: auto;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner border border-3 rounded-2" data-bs-interval="3000">
+                      <div class="carousel-item active">
+                        <img src="Resources/Icon/AIMail_1.png" alt="AIMail_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AIMail_2.png" alt="AIMail_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AIMail_3.png" alt="AIMail_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="Resources/Icon/AIMail_4.png" alt="AIMail_GamePhoto"
+                        style="max-width: 100%; height: auto;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#AIMail_Carousel"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#AIMail_Carousel"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+                  data-i18n="portfolio.AIMail.des">
+                  使用者可輸入數量、領域、地區，而後會連接到<span class="Text-point">Microsoft Azure Open AI</span>，
+                  而後根據調教好的訓練詞及範例，生成相對應的郵件(如台灣地區&電子購物領域)，AI會<span class="Text-point">回傳HTML格式</span>
+                  ，並會<span class="Text-point">模仿真實信件以生成相仿的排版及內容</span>。<br><br>
+                  <strong>單人負責的專案，前端使用<span class="Text-point">Unity</span>製作，在Windows平台運行。</strong>
+                </h5>
+              </div>
+            </section>
+            <div class="border-bottom-custom"></div>
+          </div>
         </div>
       </section>
-      <div class="border-bottom-custom4"></div>
-      <!--作品集BeTen-->
-      <section id="Home_BeTen" class="section-page">
-        <div class="Verticle-container" style="margin-top: 40px;">
-          <div class="Horizontal-container" style="margin-bottom: 10px;">
-            <img src="Resources/Icon/BeTen_Icon_Gray.png" style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-            <h1 class="font-Vertical-alignment" data-i18n="portfolio.beten.gamename">BeTen</h1>
-          </div>
-          <div class="Horizontal-container" style="margin-bottom: 30px; margin-left: 60px;">
-            <a href="https://play.google.com/store/apps/details?id=com.ZhangYuShao.BeTen" target="_blank"
-              class="btn btn-secondary btn-sm btn3">
-              <span class="nav-link">GooglePlay !</span>
-            </a>
-          </div>
-          <h4 class="font-Vertical-alignment text-content1 Text-b" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.beten.title">
-            一個大人小孩都能上手，一場接著一場的方塊消除冒險！</h4>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.beten.des">
-            遊戲目標只有一個，讓所有方塊都變成10！
-            方塊只要加起來為10，便能成功消除方塊。
-            隨著速度的增加，和各種奇怪的方塊加入，
-            這場冒險究竟還能走到多遠？
-          </h5>
-          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
-            <img src="Resources/Icon/BeTen_Game01.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-            <img src="Resources/Icon/BeTen_Game02.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-            <img src="Resources/Icon/BeTen_Game03.png" style="max-width: 32%; height: auto; margin-right: 10px;" alt="BeTen_GamePhoto">
-          </div>
-          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.beten.intro">
-            在工作期間，抱著學習的心態，在下班閒暇之餘開始製作此遊戲。
-            此遊戲是<span class="Text-point">受「Twenty」這款遊戲作為啟發</span>，而成為現在的「BeTen」。
-            而我做為唯一開發者，從<span class="Text-point">美術、企劃、程式均一手包辦</span>。
-            「BeTen」擁有完善的基礎架構，<span class="Text-point">從Singleton到各種Manager</span>都十分完善，
-            其中包含<span class="Text-point">多語、難度控制、新手教學、本地存檔、音樂音效、廣告變現等各式系統。</span>
-            <br><br><strong>本遊戲在GooglePlay上市，並有在社群網站宣傳及購買廣告宣傳。</strong>
-          </h5>
-        </div>
-      </section>
-      <div class="border-bottom-custom4"></div>
       <!--個人技能-->
       <section id="Home_Skill" class="section-page">
         <div class="Verticle-container" style="width: 100%;">
@@ -1753,6 +1909,7 @@
             甚至是<span class="Text-point">模仿指定創作者的風格</span>，進行圖片生成。<br><br>
             本人負責的部分是網頁前端的顯示，使用<span class="Text-point">React</span>，作為前端的開發框架，運用<span class="Text-point">Zustand</span>進行狀態管理，
             css則是使用<span class="Text-point">Tailwind</span>。
+          <h5>
         </div>
       </section>
       <div class="border-bottom-custom"></div>
@@ -1762,7 +1919,7 @@
           <div class="Horizontal-container" style="margin-bottom: 10px;">
             <img src="Resources/Icon/SoftwareWeb_Icon.png" class="border border-2 border-primary rounded-2"
               style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
-            <h1 class="font-Vertical-alignment" data-i18n="portfolio.AIDrawing.title">AI繪圖 (前端)</h1>
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.AIMail.title">AI信件產生器 (前端 & 後端)</h1>
           </div>
           <!--AI信件 輪播-->
           <div class="Horizontal-container" style="max-width: 75%; margin-left: 10%; margin-bottom: 40px;">
@@ -1774,7 +1931,9 @@
                 <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="1"
                   aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#AIMail_Carousel" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
               </div>
               <div class="carousel-inner border border-3 rounded-2" data-bs-interval="3000">
                 <div class="carousel-item active">
@@ -1787,6 +1946,10 @@
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                   <img src="Resources/Icon/AIMail_3.png" alt="AIMail_GamePhoto"
+                  style="max-width: 100%; height: auto;">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="Resources/Icon/AIMail_4.png" alt="AIMail_GamePhoto"
                   style="max-width: 100%; height: auto;">
                 </div>
               </div>
@@ -1803,12 +1966,12 @@
             </div>
           </div>
           <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.AIDrawing.des">
-            此專案會根據使用者傳入的照片 & 提示詞，將<span class="Text-point">Stable Diffusion</span>進行微調，
-            轉成相對應的<span class="Text-point">微調模型</span>，使其能夠<span class="Text-point">產生指定風格</span>，
-            甚至是<span class="Text-point">模仿指定創作者的風格</span>，進行圖片生成。<br><br>
-            本人負責的部分是網頁前端的顯示，使用<span class="Text-point">React</span>，作為前端的開發框架，運用<span class="Text-point">Zustand</span>進行狀態管理，
-            css則是使用<span class="Text-point">Tailwind</span>。
+            data-i18n="portfolio.AIMail.des">
+            使用者可輸入數量、領域、地區，而後會連接到<span class="Text-point">Microsoft Azure Open AI</span>，
+            而後根據調教好的訓練詞及範例，生成相對應的郵件(如台灣地區&電子購物領域)，AI會<span class="Text-point">回傳HTML格式</span>
+            ，並會<span class="Text-point">模仿真實信件以生成相仿的排版及內容</span>。<br><br>
+            <strong>單人負責的專案，前端使用<span class="Text-point">Unity</span>製作，在Windows平台運行。</strong>
+          </h5>
         </div>
       </section>
       <div class="border-bottom-custom"></div>

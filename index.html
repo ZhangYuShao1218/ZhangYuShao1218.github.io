@@ -1683,6 +1683,29 @@
     </div>
     <!-- Web -->
     <div data-type="Web" class="PortfolioType">
+      <!--AI翻譯-->
+      <section id="Portfolio_AiTranslate" class="section-page">
+        <div class="Verticle-container" style="margin-top: 60px;">
+          <div class="Horizontal-container" style="margin-bottom: 10px;">
+            <img src="Resources/Icon/SoftwareWeb_Icon.png" class="border border-2 border-primary rounded-2"
+              style="height: 36px;width: 36px; margin-right: 20px;" alt="Logo">
+            <h1 class="font-Vertical-alignment" data-i18n="portfolio.AITranslate.title">AI翻譯 (前端 & 後端)</h1>
+          </div>
+          <!--AI翻譯 圖片-->
+          <div class="Horizontal-container" style="max-width: 75%; margin-left: 60px; margin-bottom: 40px;">
+            <img src="Resources/Icon/AWSBedrock_Front_1.png" style="max-width: 100%; height: auto;" alt="AiTranslate_GamePhoto">
+          </div>
+          <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
+            data-i18n="portfolio.AITranslate.des">
+            支援<span class="Text-point">六種語言</span>(德文、法文、中文、西班牙文、日文、英文)。
+            此專案會接收使用者傳入的翻譯文件(Json格式)，傳遞至後端，由後端聯繫<span class="Text-point">AWS的Bedrock服務</span>，
+            並透過調教好的訓練詞，準確轉為指定語言及格式，並回傳至前端供下載。<br><br>
+            單人負責的專案，前端使用<span class="Text-point">React框架</span>。後端架設在<span class="Text-point">VM</span>上
+            ，且負責和AWS Bedrock進行溝通。(初期使用Microsoft Azue Open AI，後因成本和效果考量，轉換至AWS Bedrock)
+          </h5>
+        </div>
+      </section>
+      <div class="border-bottom-custom"></div>
       <!--AI繪圖-->
       <section id="Portfolio_AiDrawing" class="section-page">
         <div class="Verticle-container" style="margin-top: 60px;">
@@ -1724,19 +1747,15 @@
             </div>
           </div>
           <h5 class="font-Vertical-alignment text-content1" style="margin-left: 60px; margin-bottom: 20px;"
-            data-i18n="portfolio.AnimalStrikers.intro">
-            使用果核數位自建的<span class="Text-point">遊戲雲平台(SGC)</span>，作為底層連線通訊，開發而成的多人派對遊戲。
-            使用Unity為開發引擎，遊戲核心包含<span class="Text-point">連線、技能、武器、商城、排行榜等遊戲要素。</span>
-            遊戲目標是擊倒對手，想辦法獲得最多的擊殺分數。
-            <br><br>漿果戰祭是自行架設<span class="Text-point">VM做為Server</span>，並參考CSGO的連線架構，採用<span class="Text-point">伺服器權威控制</span>
-            並<span class="Text-point">使用狀態同步&幀同步的混合模式</span>做為連線架構。設有緩衝區(Buffer)收集指令後定時傳送至S端，
-            而後系統會有固定的頻率，同步所有玩家資訊給C端作為修正用，若和本地<span class="Text-point">預測不一樣</span>則會進行修正。
-            <br><br><strong>遊戲支援PC及手機雙平台，尚未有上架打算。</strong>
-          </h5>
+            data-i18n="portfolio.AIDrawing.des">
+            此專案會根據使用者傳入的照片 & 提示詞，將<span class="Text-point">Stable Diffusion</span>進行微調，
+            轉成相對應的<span class="Text-point">微調模型</span>，使其能夠<span class="Text-point">產生指定風格</span>，
+            甚至是<span class="Text-point">模仿指定創作者的風格</span>，進行圖片生成。<br><br>
+            本人負責的部分是網頁前端的顯示，使用<span class="Text-point">React</span>，作為前端的開發框架，運用<span class="Text-point">Zustand</span>進行狀態管理，
+            css則是使用<span class="Text-point">Tailwind</span>。
         </div>
       </section>
       <div class="border-bottom-custom"></div>
-      <!--AI翻譯-->
       <!--AI信件-->
     </div>
   </div>
